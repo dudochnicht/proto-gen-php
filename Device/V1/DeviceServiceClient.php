@@ -31,6 +31,20 @@ class DeviceServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Device\V1\ListModelDevicesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Device\V1\ListModelDevicesResponse>
+     */
+    public function ListModelDevices(\Device\V1\ListModelDevicesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/device.v1.DeviceService/ListModelDevices',
+        $argument,
+        ['\Device\V1\ListModelDevicesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Device\V1\ListSoldDevicesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
