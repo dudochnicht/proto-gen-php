@@ -10,24 +10,25 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Represents an amount of money with its currency type.
+ * Money represents a monetary value with a specific currency.
  *
  * Generated from protobuf message <code>types.v1.Money</code>
  */
 class Money extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The three-letter currency code defined in ISO 4217.
+     * ISO 4217 currency code, always uppercase and 3 letters (e.g. "EUR", "USD").
      *
      * Generated from protobuf field <code>string currency_code = 1 [json_name = "currencyCode"];</code>
      */
     protected $currency_code = '';
     /**
-     * The Amount can be positive or negative
+     * Amount in minor units (e.g. cents for EUR/USD, yen for JPY).
+     * Example: 12345 = 123.45 EUR
      *
-     * Generated from protobuf field <code>double amount = 3 [json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2 [json_name = "amount"];</code>
      */
-    protected $amount = 0.0;
+    protected $amount = 0;
 
     /**
      * Constructor.
@@ -36,9 +37,10 @@ class Money extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $currency_code
-     *           The three-letter currency code defined in ISO 4217.
-     *     @type float $amount
-     *           The Amount can be positive or negative
+     *           ISO 4217 currency code, always uppercase and 3 letters (e.g. "EUR", "USD").
+     *     @type int|string $amount
+     *           Amount in minor units (e.g. cents for EUR/USD, yen for JPY).
+     *           Example: 12345 = 123.45 EUR
      * }
      */
     public function __construct($data = NULL) {
@@ -47,7 +49,7 @@ class Money extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The three-letter currency code defined in ISO 4217.
+     * ISO 4217 currency code, always uppercase and 3 letters (e.g. "EUR", "USD").
      *
      * Generated from protobuf field <code>string currency_code = 1 [json_name = "currencyCode"];</code>
      * @return string
@@ -58,7 +60,7 @@ class Money extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The three-letter currency code defined in ISO 4217.
+     * ISO 4217 currency code, always uppercase and 3 letters (e.g. "EUR", "USD").
      *
      * Generated from protobuf field <code>string currency_code = 1 [json_name = "currencyCode"];</code>
      * @param string $var
@@ -73,10 +75,11 @@ class Money extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The Amount can be positive or negative
+     * Amount in minor units (e.g. cents for EUR/USD, yen for JPY).
+     * Example: 12345 = 123.45 EUR
      *
-     * Generated from protobuf field <code>double amount = 3 [json_name = "amount"];</code>
-     * @return float
+     * Generated from protobuf field <code>int64 amount = 2 [json_name = "amount"];</code>
+     * @return int|string
      */
     public function getAmount()
     {
@@ -84,15 +87,16 @@ class Money extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The Amount can be positive or negative
+     * Amount in minor units (e.g. cents for EUR/USD, yen for JPY).
+     * Example: 12345 = 123.45 EUR
      *
-     * Generated from protobuf field <code>double amount = 3 [json_name = "amount"];</code>
-     * @param float $var
+     * Generated from protobuf field <code>int64 amount = 2 [json_name = "amount"];</code>
+     * @param int|string $var
      * @return $this
      */
     public function setAmount($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkInt64($var);
         $this->amount = $var;
 
         return $this;
