@@ -45,6 +45,20 @@ class ConfigurationTemplateServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Catalog\V1\GetModelConfigurationTemplateRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\GetModelConfigurationTemplateResponse>
+     */
+    public function GetModelConfigurationTemplate(\Catalog\V1\GetModelConfigurationTemplateRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.ConfigurationTemplateService/GetModelConfigurationTemplate',
+        $argument,
+        ['\Catalog\V1\GetModelConfigurationTemplateResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Catalog\V1\CreateConfigurationTemplateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
