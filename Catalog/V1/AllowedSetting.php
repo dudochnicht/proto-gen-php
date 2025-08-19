@@ -27,17 +27,17 @@ class AllowedSetting extends \Google\Protobuf\Internal\Message
      */
     protected $support_note = '';
     /**
-     * references BrandService.Hardware
+     * references to Hardware.Component.ID
      *
-     * Generated from protobuf field <code>string hardware_id = 4 [json_name = "hardwareId"];</code>
+     * Generated from protobuf field <code>string component_id = 4 [json_name = "componentId"];</code>
      */
-    protected $hardware_id = '';
+    protected $component_id = '';
     /**
-     * references BrandService.Specification
+     * references to Hardware.Family.ID
      *
-     * Generated from protobuf field <code>repeated string specification_ids = 5 [json_name = "specificationIds"];</code>
+     * Generated from protobuf field <code>repeated string family_ids = 5 [json_name = "familyIds"];</code>
      */
-    private $specification_ids;
+    private $family_ids;
 
     /**
      * Constructor.
@@ -48,10 +48,10 @@ class AllowedSetting extends \Google\Protobuf\Internal\Message
      *     @type int $slot_counts
      *     @type bool $is_soldered
      *     @type string $support_note
-     *     @type string $hardware_id
-     *           references BrandService.Hardware
-     *     @type string[] $specification_ids
-     *           references BrandService.Specification
+     *     @type string $component_id
+     *           references to Hardware.Component.ID
+     *     @type string[] $family_ids
+     *           references to Hardware.Family.ID
      * }
      */
     public function __construct($data = NULL) {
@@ -126,53 +126,53 @@ class AllowedSetting extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * references BrandService.Hardware
+     * references to Hardware.Component.ID
      *
-     * Generated from protobuf field <code>string hardware_id = 4 [json_name = "hardwareId"];</code>
+     * Generated from protobuf field <code>string component_id = 4 [json_name = "componentId"];</code>
      * @return string
      */
-    public function getHardwareId()
+    public function getComponentId()
     {
-        return $this->hardware_id;
+        return $this->component_id;
     }
 
     /**
-     * references BrandService.Hardware
+     * references to Hardware.Component.ID
      *
-     * Generated from protobuf field <code>string hardware_id = 4 [json_name = "hardwareId"];</code>
+     * Generated from protobuf field <code>string component_id = 4 [json_name = "componentId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setHardwareId($var)
+    public function setComponentId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->hardware_id = $var;
+        $this->component_id = $var;
 
         return $this;
     }
 
     /**
-     * references BrandService.Specification
+     * references to Hardware.Family.ID
      *
-     * Generated from protobuf field <code>repeated string specification_ids = 5 [json_name = "specificationIds"];</code>
+     * Generated from protobuf field <code>repeated string family_ids = 5 [json_name = "familyIds"];</code>
      * @return RepeatedField<string>
      */
-    public function getSpecificationIds()
+    public function getFamilyIds()
     {
-        return $this->specification_ids;
+        return $this->family_ids;
     }
 
     /**
-     * references BrandService.Specification
+     * references to Hardware.Family.ID
      *
-     * Generated from protobuf field <code>repeated string specification_ids = 5 [json_name = "specificationIds"];</code>
+     * Generated from protobuf field <code>repeated string family_ids = 5 [json_name = "familyIds"];</code>
      * @param string[] $var
      * @return $this
      */
-    public function setSpecificationIds($var)
+    public function setFamilyIds($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->specification_ids = $arr;
+        $this->family_ids = $arr;
 
         return $this;
     }
