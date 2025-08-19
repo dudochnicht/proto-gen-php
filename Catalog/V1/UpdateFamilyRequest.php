@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class UpdateFamilyRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
      */
-    protected $id = '';
+    protected $family_id = '';
     /**
      * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
      */
@@ -41,7 +41,7 @@ class UpdateFamilyRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $family_id
      *     @type string $name
      *     @type string $note
      *     @type int $sequence
@@ -54,23 +54,23 @@ class UpdateFamilyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
      * @return string
      */
-    public function getId()
+    public function getFamilyId()
     {
-        return $this->id;
+        return $this->family_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setFamilyId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->family_id = $var;
 
         return $this;
     }

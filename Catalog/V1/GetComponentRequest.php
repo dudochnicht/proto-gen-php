@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetComponentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string component_id = 1 [json_name = "componentId"];</code>
      */
-    protected $id = '';
+    protected $component_id = '';
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetComponentRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $component_id
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,23 @@ class GetComponentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string component_id = 1 [json_name = "componentId"];</code>
      * @return string
      */
-    public function getId()
+    public function getComponentId()
     {
-        return $this->id;
+        return $this->component_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string component_id = 1 [json_name = "componentId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setComponentId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->component_id = $var;
 
         return $this;
     }

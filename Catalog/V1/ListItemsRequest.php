@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class ListItemsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
+     * Generated from protobuf field <code>string item_id = 1 [json_name = "itemId"];</code>
      */
-    protected $family_id = '';
+    protected $item_id = '';
     /**
      * Generated from protobuf field <code>.types.v1.OffsetPage page = 2 [json_name = "page"];</code>
      */
@@ -29,7 +29,7 @@ class ListItemsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $family_id
+     *     @type string $item_id
      *     @type \Types\V1\OffsetPage $page
      * }
      */
@@ -39,23 +39,23 @@ class ListItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
+     * Generated from protobuf field <code>string item_id = 1 [json_name = "itemId"];</code>
      * @return string
      */
-    public function getFamilyId()
+    public function getItemId()
     {
-        return $this->family_id;
+        return $this->item_id;
     }
 
     /**
-     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
+     * Generated from protobuf field <code>string item_id = 1 [json_name = "itemId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setFamilyId($var)
+    public function setItemId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->family_id = $var;
+        $this->item_id = $var;
 
         return $this;
     }

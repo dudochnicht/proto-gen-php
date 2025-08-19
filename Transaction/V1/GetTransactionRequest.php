@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetTransactionRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
      */
-    protected $id = '';
+    protected $transaction_id = '';
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetTransactionRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $transaction_id
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,23 @@ class GetTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
      * @return string
      */
-    public function getId()
+    public function getTransactionId()
     {
-        return $this->id;
+        return $this->transaction_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setTransactionId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->transaction_id = $var;
 
         return $this;
     }

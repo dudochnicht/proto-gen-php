@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetModelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string model_id = 1 [json_name = "modelId"];</code>
      */
-    protected $id = '';
+    protected $model_id = '';
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetModelRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $model_id
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,23 @@ class GetModelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string model_id = 1 [json_name = "modelId"];</code>
      * @return string
      */
-    public function getId()
+    public function getModelId()
     {
-        return $this->id;
+        return $this->model_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string model_id = 1 [json_name = "modelId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setModelId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->model_id = $var;
 
         return $this;
     }

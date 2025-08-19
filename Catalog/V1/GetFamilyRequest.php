@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetFamilyRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
      */
-    protected $id = '';
+    protected $family_id = '';
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetFamilyRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $family_id
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,23 @@ class GetFamilyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
      * @return string
      */
-    public function getId()
+    public function getFamilyId()
     {
-        return $this->id;
+        return $this->family_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setFamilyId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->family_id = $var;
 
         return $this;
     }

@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class RenameBrandRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string brand_id = 1 [json_name = "brandId"];</code>
      */
-    protected $id = '';
+    protected $brand_id = '';
     /**
      * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
      */
@@ -29,7 +29,7 @@ class RenameBrandRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $brand_id
      *     @type string $name
      * }
      */
@@ -39,23 +39,23 @@ class RenameBrandRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string brand_id = 1 [json_name = "brandId"];</code>
      * @return string
      */
-    public function getId()
+    public function getBrandId()
     {
-        return $this->id;
+        return $this->brand_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string brand_id = 1 [json_name = "brandId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setBrandId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->brand_id = $var;
 
         return $this;
     }

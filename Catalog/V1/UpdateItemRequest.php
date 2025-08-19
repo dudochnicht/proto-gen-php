@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class UpdateItemRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string item_id = 1 [json_name = "itemId"];</code>
      */
-    protected $id = '';
+    protected $item_id = '';
     /**
      * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
      */
@@ -45,7 +45,7 @@ class UpdateItemRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $item_id
      *     @type string $name
      *     @type string $note
      *     @type int $sequence
@@ -59,23 +59,23 @@ class UpdateItemRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string item_id = 1 [json_name = "itemId"];</code>
      * @return string
      */
-    public function getId()
+    public function getItemId()
     {
-        return $this->id;
+        return $this->item_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string item_id = 1 [json_name = "itemId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setItemId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->item_id = $var;
 
         return $this;
     }

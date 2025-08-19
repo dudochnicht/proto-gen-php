@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetConfigurationTemplateRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_template_id = 1 [json_name = "configurationTemplateId"];</code>
      */
-    protected $id = '';
+    protected $configuration_template_id = '';
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetConfigurationTemplateRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $configuration_template_id
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,23 @@ class GetConfigurationTemplateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_template_id = 1 [json_name = "configurationTemplateId"];</code>
      * @return string
      */
-    public function getId()
+    public function getConfigurationTemplateId()
     {
-        return $this->id;
+        return $this->configuration_template_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_template_id = 1 [json_name = "configurationTemplateId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setConfigurationTemplateId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->configuration_template_id = $var;
 
         return $this;
     }

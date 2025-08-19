@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class RenameSerieRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string serie_id = 1 [json_name = "serieId"];</code>
      */
-    protected $id = '';
+    protected $serie_id = '';
     /**
      * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
      */
@@ -29,7 +29,7 @@ class RenameSerieRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $serie_id
      *     @type string $name
      * }
      */
@@ -39,23 +39,23 @@ class RenameSerieRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string serie_id = 1 [json_name = "serieId"];</code>
      * @return string
      */
-    public function getId()
+    public function getSerieId()
     {
-        return $this->id;
+        return $this->serie_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string serie_id = 1 [json_name = "serieId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setSerieId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->serie_id = $var;
 
         return $this;
     }

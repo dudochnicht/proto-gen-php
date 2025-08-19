@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetConfigurationRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_id = 1 [json_name = "configurationId"];</code>
      */
-    protected $id = '';
+    protected $configuration_id = '';
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetConfigurationRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $configuration_id
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,23 @@ class GetConfigurationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_id = 1 [json_name = "configurationId"];</code>
      * @return string
      */
-    public function getId()
+    public function getConfigurationId()
     {
-        return $this->id;
+        return $this->configuration_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_id = 1 [json_name = "configurationId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setConfigurationId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->configuration_id = $var;
 
         return $this;
     }

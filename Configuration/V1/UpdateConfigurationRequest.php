@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class UpdateConfigurationRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_id = 1 [json_name = "configurationId"];</code>
      */
-    protected $id = '';
+    protected $configuration_id = '';
     /**
      * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceId"];</code>
      */
@@ -85,7 +85,7 @@ class UpdateConfigurationRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $configuration_id
      *     @type string $device_id
      *     @type string $mainboard_id
      *     @type string $processor_id
@@ -109,23 +109,23 @@ class UpdateConfigurationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_id = 1 [json_name = "configurationId"];</code>
      * @return string
      */
-    public function getId()
+    public function getConfigurationId()
     {
-        return $this->id;
+        return $this->configuration_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string configuration_id = 1 [json_name = "configurationId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setConfigurationId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->configuration_id = $var;
 
         return $this;
     }

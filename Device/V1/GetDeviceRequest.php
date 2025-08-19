@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetDeviceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
      */
-    protected $id = '';
+    protected $device_id = '';
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetDeviceRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $device_id
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,23 @@ class GetDeviceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
      * @return string
      */
-    public function getId()
+    public function getDeviceId()
     {
-        return $this->id;
+        return $this->device_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setDeviceId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->device_id = $var;
 
         return $this;
     }
