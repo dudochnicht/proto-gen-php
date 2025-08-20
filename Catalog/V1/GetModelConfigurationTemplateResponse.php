@@ -18,6 +18,14 @@ class GetModelConfigurationTemplateResponse extends \Google\Protobuf\Internal\Me
      * Generated from protobuf field <code>.catalog.v1.ConfigurationTemplate configuration_template = 1 [json_name = "configurationTemplate"];</code>
      */
     protected $configuration_template = null;
+    /**
+     * Generated from protobuf field <code>repeated .catalog.v1.Component hardware_components = 2 [json_name = "hardwareComponents"];</code>
+     */
+    private $hardware_components;
+    /**
+     * Generated from protobuf field <code>repeated .catalog.v1.Family hardware_families = 3 [json_name = "hardwareFamilies"];</code>
+     */
+    private $hardware_families;
 
     /**
      * Constructor.
@@ -26,6 +34,8 @@ class GetModelConfigurationTemplateResponse extends \Google\Protobuf\Internal\Me
      *     Optional. Data for populating the Message object.
      *
      *     @type \Catalog\V1\ConfigurationTemplate $configuration_template
+     *     @type \Catalog\V1\Component[] $hardware_components
+     *     @type \Catalog\V1\Family[] $hardware_families
      * }
      */
     public function __construct($data = NULL) {
@@ -61,6 +71,50 @@ class GetModelConfigurationTemplateResponse extends \Google\Protobuf\Internal\Me
     {
         GPBUtil::checkMessage($var, \Catalog\V1\ConfigurationTemplate::class);
         $this->configuration_template = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .catalog.v1.Component hardware_components = 2 [json_name = "hardwareComponents"];</code>
+     * @return RepeatedField<\Catalog\V1\Component>
+     */
+    public function getHardwareComponents()
+    {
+        return $this->hardware_components;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .catalog.v1.Component hardware_components = 2 [json_name = "hardwareComponents"];</code>
+     * @param \Catalog\V1\Component[] $var
+     * @return $this
+     */
+    public function setHardwareComponents($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Catalog\V1\Component::class);
+        $this->hardware_components = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .catalog.v1.Family hardware_families = 3 [json_name = "hardwareFamilies"];</code>
+     * @return RepeatedField<\Catalog\V1\Family>
+     */
+    public function getHardwareFamilies()
+    {
+        return $this->hardware_families;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .catalog.v1.Family hardware_families = 3 [json_name = "hardwareFamilies"];</code>
+     * @param \Catalog\V1\Family[] $var
+     * @return $this
+     */
+    public function setHardwareFamilies($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Catalog\V1\Family::class);
+        $this->hardware_families = $arr;
 
         return $this;
     }
