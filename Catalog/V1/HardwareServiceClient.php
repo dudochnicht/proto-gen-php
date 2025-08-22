@@ -227,6 +227,20 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Catalog\V1\GetFamilyItemsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\GetFamilyItemsResponse>
+     */
+    public function GetFamilyItems(\Catalog\V1\GetFamilyItemsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.HardwareService/GetFamilyItems',
+        $argument,
+        ['\Catalog\V1\GetFamilyItemsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Catalog\V1\CreateItemRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
