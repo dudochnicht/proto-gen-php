@@ -45,6 +45,20 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Catalog\V1\GetComponentsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\GetComponentsResponse>
+     */
+    public function GetComponents(\Catalog\V1\GetComponentsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.HardwareService/GetComponents',
+        $argument,
+        ['\Catalog\V1\GetComponentsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Catalog\V1\CreateComponentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -115,6 +129,20 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Catalog\V1\GetFamiliesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\GetFamiliesResponse>
+     */
+    public function GetFamilies(\Catalog\V1\GetFamiliesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.HardwareService/GetFamilies',
+        $argument,
+        ['\Catalog\V1\GetFamiliesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Catalog\V1\CreateFamilyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -181,6 +209,20 @@ class HardwareServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/catalog.v1.HardwareService/GetItem',
         $argument,
         ['\Catalog\V1\GetItemResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Catalog\V1\GetItemsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\GetItemsResponse>
+     */
+    public function GetItems(\Catalog\V1\GetItemsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.HardwareService/GetItems',
+        $argument,
+        ['\Catalog\V1\GetItemsResponse', 'decode'],
         $metadata, $options);
     }
 

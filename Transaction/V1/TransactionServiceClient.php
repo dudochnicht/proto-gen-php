@@ -45,6 +45,20 @@ class TransactionServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Transaction\V1\GetTransactionsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Transaction\V1\GetTransactionsResponse>
+     */
+    public function GetTransactions(\Transaction\V1\GetTransactionsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/transaction.v1.TransactionService/GetTransactions',
+        $argument,
+        ['\Transaction\V1\GetTransactionsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Transaction\V1\CreateTransactionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

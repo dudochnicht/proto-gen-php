@@ -15,7 +15,11 @@ use Google\Protobuf\RepeatedField;
 class FullModelName extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
+     * Generated from protobuf field <code>string model_id = 1 [json_name = "modelId"];</code>
+     */
+    protected $model_id = '';
+    /**
+     * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
      */
     protected $name = '';
 
@@ -25,6 +29,7 @@ class FullModelName extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $model_id
      *     @type string $name
      * }
      */
@@ -34,7 +39,29 @@ class FullModelName extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
+     * Generated from protobuf field <code>string model_id = 1 [json_name = "modelId"];</code>
+     * @return string
+     */
+    public function getModelId()
+    {
+        return $this->model_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string model_id = 1 [json_name = "modelId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setModelId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->model_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
      * @return string
      */
     public function getName()
@@ -43,7 +70,7 @@ class FullModelName extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
+     * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
      * @param string $var
      * @return $this
      */
