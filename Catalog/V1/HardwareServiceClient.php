@@ -282,4 +282,18 @@ class HardwareServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Catalog\V1\SearchItemsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\SearchItemsResponse>
+     */
+    public function SearchItems(\Catalog\V1\SearchItemsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.HardwareService/SearchItems',
+        $argument,
+        ['\Catalog\V1\SearchItemsResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
