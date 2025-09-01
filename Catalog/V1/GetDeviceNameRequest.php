@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>catalog.v1.GetFullModelNameRequest</code>
+ * Generated from protobuf message <code>catalog.v1.GetDeviceNameRequest</code>
  */
-class GetFullModelNameRequest extends \Google\Protobuf\Internal\Message
+class GetDeviceNameRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string model_id = 1 [json_name = "modelId"];</code>

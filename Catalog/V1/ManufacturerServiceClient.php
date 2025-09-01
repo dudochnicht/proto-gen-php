@@ -227,16 +227,16 @@ class ManufacturerServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Catalog\V1\GetFullModelNameRequest $argument input argument
+     * @param \Catalog\V1\GetDeviceNameRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\GetFullModelNameResponse>
+     * @return \Grpc\UnaryCall<\Catalog\V1\GetDeviceNameResponse>
      */
-    public function GetFullModelName(\Catalog\V1\GetFullModelNameRequest $argument,
+    public function GetDeviceName(\Catalog\V1\GetDeviceNameRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.ManufacturerService/GetFullModelName',
+        return $this->_simpleRequest('/catalog.v1.ManufacturerService/GetDeviceName',
         $argument,
-        ['\Catalog\V1\GetFullModelNameResponse', 'decode'],
+        ['\Catalog\V1\GetDeviceNameResponse', 'decode'],
         $metadata, $options);
     }
 

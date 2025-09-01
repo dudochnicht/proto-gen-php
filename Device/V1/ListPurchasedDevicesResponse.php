@@ -25,11 +25,11 @@ class ListPurchasedDevicesResponse extends \Google\Protobuf\Internal\Message
      */
     private $transactions;
     /**
-     * Key = ModelID, Value = FullModelName (Brand + Serie + Model)
+     * Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      *
-     * Generated from protobuf field <code>map<string, .catalog.v1.FullModelName> full_model_names = 3 [json_name = "fullModelNames"];</code>
+     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 3 [json_name = "deviceNames"];</code>
      */
-    private $full_model_names;
+    private $device_names;
     /**
      * Generated from protobuf field <code>.types.v1.OffsetPageResult page_result = 4 [json_name = "pageResult"];</code>
      */
@@ -44,8 +44,8 @@ class ListPurchasedDevicesResponse extends \Google\Protobuf\Internal\Message
      *     @type \Device\V1\Device[] $devices
      *     @type array|\Google\Protobuf\Internal\MapField $transactions
      *           Key = TransactionID, Value = Transactions
-     *     @type array|\Google\Protobuf\Internal\MapField $full_model_names
-     *           Key = ModelID, Value = FullModelName (Brand + Serie + Model)
+     *     @type array|\Google\Protobuf\Internal\MapField $device_names
+     *           Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      *     @type \Types\V1\OffsetPageResult $page_result
      * }
      */
@@ -103,27 +103,27 @@ class ListPurchasedDevicesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Key = ModelID, Value = FullModelName (Brand + Serie + Model)
+     * Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      *
-     * Generated from protobuf field <code>map<string, .catalog.v1.FullModelName> full_model_names = 3 [json_name = "fullModelNames"];</code>
+     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 3 [json_name = "deviceNames"];</code>
      * @return \Google\Protobuf\Internal\MapField
      */
-    public function getFullModelNames()
+    public function getDeviceNames()
     {
-        return $this->full_model_names;
+        return $this->device_names;
     }
 
     /**
-     * Key = ModelID, Value = FullModelName (Brand + Serie + Model)
+     * Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      *
-     * Generated from protobuf field <code>map<string, .catalog.v1.FullModelName> full_model_names = 3 [json_name = "fullModelNames"];</code>
+     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 3 [json_name = "deviceNames"];</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setFullModelNames($var)
+    public function setDeviceNames($var)
     {
-        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \Catalog\V1\FullModelName::class);
-        $this->full_model_names = $arr;
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \Catalog\V1\DeviceName::class);
+        $this->device_names = $arr;
 
         return $this;
     }
