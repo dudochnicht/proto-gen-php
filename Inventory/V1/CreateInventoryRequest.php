@@ -10,40 +10,36 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>inventory.v1.Inventory</code>
+ * Generated from protobuf message <code>inventory.v1.CreateInventoryRequest</code>
  */
-class Inventory extends \Google\Protobuf\Internal\Message
+class CreateInventoryRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
-     */
-    protected $id = '';
-    /**
-     * Generated from protobuf field <code>.inventory.v1.InventoryType inventory_type = 2 [json_name = "inventoryType"];</code>
+     * Generated from protobuf field <code>.inventory.v1.InventoryType inventory_type = 1 [json_name = "inventoryType"];</code>
      */
     protected $inventory_type = 0;
     /**
-     * Generated from protobuf field <code>string component_id = 3 [json_name = "componentId"];</code>
+     * Generated from protobuf field <code>string component_id = 2 [json_name = "componentId"];</code>
      */
     protected $component_id = '';
     /**
-     * Generated from protobuf field <code>string item_id = 4 [json_name = "itemId"];</code>
+     * Generated from protobuf field <code>string item_id = 3 [json_name = "itemId"];</code>
      */
     protected $item_id = '';
     /**
-     * Generated from protobuf field <code>optional string note = 5 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 4 [json_name = "note"];</code>
      */
     protected $note = null;
     /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
+     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 5 [json_name = "transactionIds"];</code>
      */
     protected $transaction_ids = null;
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 7 [json_name = "fromDevice"];</code>
+     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
      */
     protected $from_device = null;
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 8 [json_name = "toDevice"];</code>
+     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
      */
     protected $to_device = null;
 
@@ -53,7 +49,6 @@ class Inventory extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
      *     @type int $inventory_type
      *     @type string $component_id
      *     @type string $item_id
@@ -69,29 +64,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.inventory.v1.InventoryType inventory_type = 2 [json_name = "inventoryType"];</code>
+     * Generated from protobuf field <code>.inventory.v1.InventoryType inventory_type = 1 [json_name = "inventoryType"];</code>
      * @return int
      */
     public function getInventoryType()
@@ -100,7 +73,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.InventoryType inventory_type = 2 [json_name = "inventoryType"];</code>
+     * Generated from protobuf field <code>.inventory.v1.InventoryType inventory_type = 1 [json_name = "inventoryType"];</code>
      * @param int $var
      * @return $this
      */
@@ -113,7 +86,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string component_id = 3 [json_name = "componentId"];</code>
+     * Generated from protobuf field <code>string component_id = 2 [json_name = "componentId"];</code>
      * @return string
      */
     public function getComponentId()
@@ -122,7 +95,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string component_id = 3 [json_name = "componentId"];</code>
+     * Generated from protobuf field <code>string component_id = 2 [json_name = "componentId"];</code>
      * @param string $var
      * @return $this
      */
@@ -135,7 +108,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string item_id = 4 [json_name = "itemId"];</code>
+     * Generated from protobuf field <code>string item_id = 3 [json_name = "itemId"];</code>
      * @return string
      */
     public function getItemId()
@@ -144,7 +117,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string item_id = 4 [json_name = "itemId"];</code>
+     * Generated from protobuf field <code>string item_id = 3 [json_name = "itemId"];</code>
      * @param string $var
      * @return $this
      */
@@ -157,7 +130,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string note = 5 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 4 [json_name = "note"];</code>
      * @return string
      */
     public function getNote()
@@ -176,7 +149,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string note = 5 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 4 [json_name = "note"];</code>
      * @param string $var
      * @return $this
      */
@@ -189,7 +162,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
+     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 5 [json_name = "transactionIds"];</code>
      * @return \Device\V1\TransactionIds|null
      */
     public function getTransactionIds()
@@ -208,7 +181,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
+     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 5 [json_name = "transactionIds"];</code>
      * @param \Device\V1\TransactionIds $var
      * @return $this
      */
@@ -221,7 +194,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 7 [json_name = "fromDevice"];</code>
+     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
      * @return \Inventory\V1\DeviceReference|null
      */
     public function getFromDevice()
@@ -240,7 +213,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 7 [json_name = "fromDevice"];</code>
+     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
      * @param \Inventory\V1\DeviceReference $var
      * @return $this
      */
@@ -253,7 +226,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 8 [json_name = "toDevice"];</code>
+     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
      * @return \Inventory\V1\DeviceReference|null
      */
     public function getToDevice()
@@ -272,7 +245,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 8 [json_name = "toDevice"];</code>
+     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
      * @param \Inventory\V1\DeviceReference $var
      * @return $this
      */

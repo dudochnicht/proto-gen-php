@@ -10,14 +10,14 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>inventory.v1.Inventory</code>
+ * Generated from protobuf message <code>inventory.v1.UpdateInventoryRequest</code>
  */
-class Inventory extends \Google\Protobuf\Internal\Message
+class UpdateInventoryRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string inventory_id = 1 [json_name = "inventoryId"];</code>
      */
-    protected $id = '';
+    protected $inventory_id = '';
     /**
      * Generated from protobuf field <code>.inventory.v1.InventoryType inventory_type = 2 [json_name = "inventoryType"];</code>
      */
@@ -53,7 +53,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
+     *     @type string $inventory_id
      *     @type int $inventory_type
      *     @type string $component_id
      *     @type string $item_id
@@ -69,23 +69,23 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string inventory_id = 1 [json_name = "inventoryId"];</code>
      * @return string
      */
-    public function getId()
+    public function getInventoryId()
     {
-        return $this->id;
+        return $this->inventory_id;
     }
 
     /**
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>string inventory_id = 1 [json_name = "inventoryId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setInventoryId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->inventory_id = $var;
 
         return $this;
     }
