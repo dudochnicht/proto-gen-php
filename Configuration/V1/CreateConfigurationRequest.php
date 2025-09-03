@@ -19,7 +19,11 @@ class CreateConfigurationRequest extends \Google\Protobuf\Internal\Message
      */
     protected $device_id = '';
     /**
-     * Generated from protobuf field <code>repeated .configuration.v1.ConfigurationSetting configuration_settings = 2 [json_name = "configurationSettings"];</code>
+     * Generated from protobuf field <code>string model_id = 2 [json_name = "modelId"];</code>
+     */
+    protected $model_id = '';
+    /**
+     * Generated from protobuf field <code>repeated .configuration.v1.ConfigurationSetting configuration_settings = 3 [json_name = "configurationSettings"];</code>
      */
     private $configuration_settings;
 
@@ -30,6 +34,7 @@ class CreateConfigurationRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $device_id
+     *     @type string $model_id
      *     @type \Configuration\V1\ConfigurationSetting[] $configuration_settings
      * }
      */
@@ -61,7 +66,29 @@ class CreateConfigurationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .configuration.v1.ConfigurationSetting configuration_settings = 2 [json_name = "configurationSettings"];</code>
+     * Generated from protobuf field <code>string model_id = 2 [json_name = "modelId"];</code>
+     * @return string
+     */
+    public function getModelId()
+    {
+        return $this->model_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string model_id = 2 [json_name = "modelId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setModelId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->model_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .configuration.v1.ConfigurationSetting configuration_settings = 3 [json_name = "configurationSettings"];</code>
      * @return RepeatedField<\Configuration\V1\ConfigurationSetting>
      */
     public function getConfigurationSettings()
@@ -70,7 +97,7 @@ class CreateConfigurationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .configuration.v1.ConfigurationSetting configuration_settings = 2 [json_name = "configurationSettings"];</code>
+     * Generated from protobuf field <code>repeated .configuration.v1.ConfigurationSetting configuration_settings = 3 [json_name = "configurationSettings"];</code>
      * @param \Configuration\V1\ConfigurationSetting[] $var
      * @return $this
      */
