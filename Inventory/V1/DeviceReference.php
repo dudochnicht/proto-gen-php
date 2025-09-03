@@ -23,9 +23,9 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
      */
     protected $configuration_id = '';
     /**
-     * Generated from protobuf field <code>string slot_number = 3 [json_name = "slotNumber"];</code>
+     * Generated from protobuf field <code>int32 slot_number = 3 [json_name = "slotNumber"];</code>
      */
-    protected $slot_number = '';
+    protected $slot_number = 0;
 
     /**
      * Constructor.
@@ -35,7 +35,7 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
      *
      *     @type string $device_id
      *     @type string $configuration_id
-     *     @type string $slot_number
+     *     @type int $slot_number
      * }
      */
     public function __construct($data = NULL) {
@@ -88,8 +88,8 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string slot_number = 3 [json_name = "slotNumber"];</code>
-     * @return string
+     * Generated from protobuf field <code>int32 slot_number = 3 [json_name = "slotNumber"];</code>
+     * @return int
      */
     public function getSlotNumber()
     {
@@ -97,13 +97,13 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string slot_number = 3 [json_name = "slotNumber"];</code>
-     * @param string $var
+     * Generated from protobuf field <code>int32 slot_number = 3 [json_name = "slotNumber"];</code>
+     * @param int $var
      * @return $this
      */
     public function setSlotNumber($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt32($var);
         $this->slot_number = $var;
 
         return $this;

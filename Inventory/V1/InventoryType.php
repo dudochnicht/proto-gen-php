@@ -17,21 +17,21 @@ class InventoryType
      */
     const INVENTORY_TYPE_UNSPECIFIED = 0;
     /**
-     * Generated from protobuf enum <code>INVENTORY_TYPE_PURCHASE = 1;</code>
+     * Generated from protobuf enum <code>INVENTORY_TYPE_FAULTY = 1;</code>
      */
-    const INVENTORY_TYPE_PURCHASE = 1;
+    const INVENTORY_TYPE_FAULTY = 1;
     /**
-     * Generated from protobuf enum <code>INVENTORY_TYPE_SALE = 2;</code>
+     * Generated from protobuf enum <code>INVENTORY_TYPE_NEW = 2;</code>
      */
-    const INVENTORY_TYPE_SALE = 2;
+    const INVENTORY_TYPE_NEW = 2;
     /**
-     * Generated from protobuf enum <code>INVENTORY_TYPE_REPLACE = 3;</code>
+     * Generated from protobuf enum <code>INVENTORY_TYPE_SELL = 3;</code>
      */
-    const INVENTORY_TYPE_REPLACE = 3;
+    const INVENTORY_TYPE_SELL = 3;
     /**
-     * Generated from protobuf enum <code>INVENTORY_TYPE_DEFECTIVE = 4;</code>
+     * Generated from protobuf enum <code>INVENTORY_TYPE_SWAP = 4;</code>
      */
-    const INVENTORY_TYPE_DEFECTIVE = 4;
+    const INVENTORY_TYPE_SWAP = 4;
     /**
      * Generated from protobuf enum <code>INVENTORY_TYPE_OWN_USE = 5;</code>
      */
@@ -39,10 +39,10 @@ class InventoryType
 
     private static $valueToName = [
         self::INVENTORY_TYPE_UNSPECIFIED => 'INVENTORY_TYPE_UNSPECIFIED',
-        self::INVENTORY_TYPE_PURCHASE => 'INVENTORY_TYPE_PURCHASE',
-        self::INVENTORY_TYPE_SALE => 'INVENTORY_TYPE_SALE',
-        self::INVENTORY_TYPE_REPLACE => 'INVENTORY_TYPE_REPLACE',
-        self::INVENTORY_TYPE_DEFECTIVE => 'INVENTORY_TYPE_DEFECTIVE',
+        self::INVENTORY_TYPE_FAULTY => 'INVENTORY_TYPE_FAULTY',
+        self::INVENTORY_TYPE_NEW => 'INVENTORY_TYPE_NEW',
+        self::INVENTORY_TYPE_SELL => 'INVENTORY_TYPE_SELL',
+        self::INVENTORY_TYPE_SWAP => 'INVENTORY_TYPE_SWAP',
         self::INVENTORY_TYPE_OWN_USE => 'INVENTORY_TYPE_OWN_USE',
     ];
 
