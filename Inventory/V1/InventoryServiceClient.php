@@ -73,6 +73,20 @@ class InventoryServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Inventory\V1\GetUnmatchedItemsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Inventory\V1\GetUnmatchedItemsResponse>
+     */
+    public function GetUnmatchedItems(\Inventory\V1\GetUnmatchedItemsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/inventory.v1.InventoryService/GetUnmatchedItems',
+        $argument,
+        ['\Inventory\V1\GetUnmatchedItemsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Inventory\V1\CreateInventoryRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
