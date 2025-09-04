@@ -27,9 +27,9 @@ class Item extends \Google\Protobuf\Internal\Message
      */
     protected $name = '';
     /**
-     * Generated from protobuf field <code>string note = 4 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 4 [json_name = "note"];</code>
      */
-    protected $note = '';
+    protected $note = null;
     /**
      * Generated from protobuf field <code>int32 sequence = 5 [json_name = "sequence"];</code>
      */
@@ -39,9 +39,9 @@ class Item extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = 0;
     /**
-     * Generated from protobuf field <code>string category = 7 [json_name = "category"];</code>
+     * Generated from protobuf field <code>optional string category = 7 [json_name = "category"];</code>
      */
-    protected $category = '';
+    protected $category = null;
     /**
      * Generated from protobuf field <code>optional int32 in_uses_count = 8 [json_name = "inUsesCount"];</code>
      */
@@ -140,16 +140,26 @@ class Item extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string note = 4 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 4 [json_name = "note"];</code>
      * @return string
      */
     public function getNote()
     {
-        return $this->note;
+        return isset($this->note) ? $this->note : '';
+    }
+
+    public function hasNote()
+    {
+        return isset($this->note);
+    }
+
+    public function clearNote()
+    {
+        unset($this->note);
     }
 
     /**
-     * Generated from protobuf field <code>string note = 4 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 4 [json_name = "note"];</code>
      * @param string $var
      * @return $this
      */
@@ -206,16 +216,26 @@ class Item extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string category = 7 [json_name = "category"];</code>
+     * Generated from protobuf field <code>optional string category = 7 [json_name = "category"];</code>
      * @return string
      */
     public function getCategory()
     {
-        return $this->category;
+        return isset($this->category) ? $this->category : '';
+    }
+
+    public function hasCategory()
+    {
+        return isset($this->category);
+    }
+
+    public function clearCategory()
+    {
+        unset($this->category);
     }
 
     /**
-     * Generated from protobuf field <code>string category = 7 [json_name = "category"];</code>
+     * Generated from protobuf field <code>optional string category = 7 [json_name = "category"];</code>
      * @param string $var
      * @return $this
      */

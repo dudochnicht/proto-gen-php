@@ -27,17 +27,17 @@ class Inventory extends \Google\Protobuf\Internal\Message
      */
     protected $component_id = '';
     /**
-     * Generated from protobuf field <code>string item_id = 4 [json_name = "itemId"];</code>
+     * Generated from protobuf field <code>string family_id = 4 [json_name = "familyId"];</code>
+     */
+    protected $family_id = '';
+    /**
+     * Generated from protobuf field <code>string item_id = 5 [json_name = "itemId"];</code>
      */
     protected $item_id = '';
     /**
-     * Generated from protobuf field <code>optional string note = 5 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 6 [json_name = "note"];</code>
      */
     protected $note = null;
-    /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
-     */
-    protected $transaction_ids = null;
     /**
      * Generated from protobuf field <code>optional .inventory.v1.DeviceReference from_device = 7 [json_name = "fromDevice"];</code>
      */
@@ -56,9 +56,9 @@ class Inventory extends \Google\Protobuf\Internal\Message
      *     @type string $id
      *     @type int $inventory_type
      *     @type string $component_id
+     *     @type string $family_id
      *     @type string $item_id
      *     @type string $note
-     *     @type \Device\V1\TransactionIds $transaction_ids
      *     @type \Inventory\V1\DeviceReference $from_device
      *     @type \Inventory\V1\DeviceReference $to_device
      * }
@@ -135,7 +135,29 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string item_id = 4 [json_name = "itemId"];</code>
+     * Generated from protobuf field <code>string family_id = 4 [json_name = "familyId"];</code>
+     * @return string
+     */
+    public function getFamilyId()
+    {
+        return $this->family_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string family_id = 4 [json_name = "familyId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFamilyId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->family_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string item_id = 5 [json_name = "itemId"];</code>
      * @return string
      */
     public function getItemId()
@@ -144,7 +166,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string item_id = 4 [json_name = "itemId"];</code>
+     * Generated from protobuf field <code>string item_id = 5 [json_name = "itemId"];</code>
      * @param string $var
      * @return $this
      */
@@ -157,7 +179,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string note = 5 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 6 [json_name = "note"];</code>
      * @return string
      */
     public function getNote()
@@ -176,7 +198,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string note = 5 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 6 [json_name = "note"];</code>
      * @param string $var
      * @return $this
      */
@@ -184,38 +206,6 @@ class Inventory extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->note = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
-     * @return \Device\V1\TransactionIds|null
-     */
-    public function getTransactionIds()
-    {
-        return $this->transaction_ids;
-    }
-
-    public function hasTransactionIds()
-    {
-        return isset($this->transaction_ids);
-    }
-
-    public function clearTransactionIds()
-    {
-        unset($this->transaction_ids);
-    }
-
-    /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
-     * @param \Device\V1\TransactionIds $var
-     * @return $this
-     */
-    public function setTransactionIds($var)
-    {
-        GPBUtil::checkMessage($var, \Device\V1\TransactionIds::class);
-        $this->transaction_ids = $var;
 
         return $this;
     }

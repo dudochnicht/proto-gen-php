@@ -23,7 +23,11 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
      */
     protected $configuration_id = '';
     /**
-     * Generated from protobuf field <code>int32 slot_number = 3 [json_name = "slotNumber"];</code>
+     * Generated from protobuf field <code>optional string transaction_id = 3 [json_name = "transactionId"];</code>
+     */
+    protected $transaction_id = null;
+    /**
+     * Generated from protobuf field <code>int32 slot_number = 4 [json_name = "slotNumber"];</code>
      */
     protected $slot_number = 0;
 
@@ -35,6 +39,7 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
      *
      *     @type string $device_id
      *     @type string $configuration_id
+     *     @type string $transaction_id
      *     @type int $slot_number
      * }
      */
@@ -88,7 +93,39 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 slot_number = 3 [json_name = "slotNumber"];</code>
+     * Generated from protobuf field <code>optional string transaction_id = 3 [json_name = "transactionId"];</code>
+     * @return string
+     */
+    public function getTransactionId()
+    {
+        return isset($this->transaction_id) ? $this->transaction_id : '';
+    }
+
+    public function hasTransactionId()
+    {
+        return isset($this->transaction_id);
+    }
+
+    public function clearTransactionId()
+    {
+        unset($this->transaction_id);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string transaction_id = 3 [json_name = "transactionId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTransactionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->transaction_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 slot_number = 4 [json_name = "slotNumber"];</code>
      * @return int
      */
     public function getSlotNumber()
@@ -97,7 +134,7 @@ class DeviceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 slot_number = 3 [json_name = "slotNumber"];</code>
+     * Generated from protobuf field <code>int32 slot_number = 4 [json_name = "slotNumber"];</code>
      * @param int $var
      * @return $this
      */
