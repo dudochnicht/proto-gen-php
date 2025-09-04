@@ -18,6 +18,12 @@ class GetInventoriesToDeviceResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .inventory.v1.Inventory inventories = 1 [json_name = "inventories"];</code>
      */
     private $inventories;
+    /**
+     * Key = TransactionID, Value = Transactions
+     *
+     * Generated from protobuf field <code>map<string, .transaction.v1.Transaction> transactions = 2 [json_name = "transactions"];</code>
+     */
+    private $transactions;
 
     /**
      * Constructor.
@@ -26,6 +32,8 @@ class GetInventoriesToDeviceResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Inventory\V1\Inventory[] $inventories
+     *     @type array|\Google\Protobuf\Internal\MapField $transactions
+     *           Key = TransactionID, Value = Transactions
      * }
      */
     public function __construct($data = NULL) {
@@ -51,6 +59,32 @@ class GetInventoriesToDeviceResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Inventory\V1\Inventory::class);
         $this->inventories = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Key = TransactionID, Value = Transactions
+     *
+     * Generated from protobuf field <code>map<string, .transaction.v1.Transaction> transactions = 2 [json_name = "transactions"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getTransactions()
+    {
+        return $this->transactions;
+    }
+
+    /**
+     * Key = TransactionID, Value = Transactions
+     *
+     * Generated from protobuf field <code>map<string, .transaction.v1.Transaction> transactions = 2 [json_name = "transactions"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setTransactions($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \Transaction\V1\Transaction::class);
+        $this->transactions = $arr;
 
         return $this;
     }

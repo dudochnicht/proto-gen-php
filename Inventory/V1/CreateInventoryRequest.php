@@ -35,11 +35,11 @@ class CreateInventoryRequest extends \Google\Protobuf\Internal\Message
      */
     protected $transaction_ids = null;
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
      */
     protected $from_device = null;
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
      */
     protected $to_device = null;
 
@@ -194,7 +194,7 @@ class CreateInventoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
      * @return \Inventory\V1\DeviceReference|null
      */
     public function getFromDevice()
@@ -213,7 +213,7 @@ class CreateInventoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceReference from_device = 6 [json_name = "fromDevice"];</code>
      * @param \Inventory\V1\DeviceReference $var
      * @return $this
      */
@@ -226,7 +226,7 @@ class CreateInventoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
      * @return \Inventory\V1\DeviceReference|null
      */
     public function getToDevice()
@@ -245,7 +245,7 @@ class CreateInventoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceReference to_device = 7 [json_name = "toDevice"];</code>
      * @param \Inventory\V1\DeviceReference $var
      * @return $this
      */

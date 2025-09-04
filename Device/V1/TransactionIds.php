@@ -19,9 +19,9 @@ class TransactionIds extends \Google\Protobuf\Internal\Message
      */
     protected $purchase_id = '';
     /**
-     * Generated from protobuf field <code>string sale_id = 2 [json_name = "saleId"];</code>
+     * Generated from protobuf field <code>optional string sale_id = 2 [json_name = "saleId"];</code>
      */
-    protected $sale_id = '';
+    protected $sale_id = null;
 
     /**
      * Constructor.
@@ -61,16 +61,26 @@ class TransactionIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sale_id = 2 [json_name = "saleId"];</code>
+     * Generated from protobuf field <code>optional string sale_id = 2 [json_name = "saleId"];</code>
      * @return string
      */
     public function getSaleId()
     {
-        return $this->sale_id;
+        return isset($this->sale_id) ? $this->sale_id : '';
+    }
+
+    public function hasSaleId()
+    {
+        return isset($this->sale_id);
+    }
+
+    public function clearSaleId()
+    {
+        unset($this->sale_id);
     }
 
     /**
-     * Generated from protobuf field <code>string sale_id = 2 [json_name = "saleId"];</code>
+     * Generated from protobuf field <code>optional string sale_id = 2 [json_name = "saleId"];</code>
      * @param string $var
      * @return $this
      */
