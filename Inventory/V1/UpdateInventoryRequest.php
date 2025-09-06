@@ -39,11 +39,11 @@ class UpdateInventoryRequest extends \Google\Protobuf\Internal\Message
      */
     protected $note = null;
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 7 [json_name = "fromDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_from = 7 [json_name = "transferFrom"];</code>
      */
-    protected $from_device = null;
+    protected $transfer_from = null;
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 8 [json_name = "toDevice"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.Transfer to_device = 8 [json_name = "toDevice"];</code>
      */
     protected $to_device = null;
 
@@ -59,8 +59,8 @@ class UpdateInventoryRequest extends \Google\Protobuf\Internal\Message
      *     @type string $family_id
      *     @type string $item_id
      *     @type string $note
-     *     @type \Inventory\V1\DeviceReference $from_device
-     *     @type \Inventory\V1\DeviceReference $to_device
+     *     @type \Inventory\V1\Transfer $transfer_from
+     *     @type \Inventory\V1\Transfer $to_device
      * }
      */
     public function __construct($data = NULL) {
@@ -211,40 +211,40 @@ class UpdateInventoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 7 [json_name = "fromDevice"];</code>
-     * @return \Inventory\V1\DeviceReference|null
+     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_from = 7 [json_name = "transferFrom"];</code>
+     * @return \Inventory\V1\Transfer|null
      */
-    public function getFromDevice()
+    public function getTransferFrom()
     {
-        return $this->from_device;
+        return $this->transfer_from;
     }
 
-    public function hasFromDevice()
+    public function hasTransferFrom()
     {
-        return isset($this->from_device);
+        return isset($this->transfer_from);
     }
 
-    public function clearFromDevice()
+    public function clearTransferFrom()
     {
-        unset($this->from_device);
+        unset($this->transfer_from);
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference from_device = 7 [json_name = "fromDevice"];</code>
-     * @param \Inventory\V1\DeviceReference $var
+     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_from = 7 [json_name = "transferFrom"];</code>
+     * @param \Inventory\V1\Transfer $var
      * @return $this
      */
-    public function setFromDevice($var)
+    public function setTransferFrom($var)
     {
-        GPBUtil::checkMessage($var, \Inventory\V1\DeviceReference::class);
-        $this->from_device = $var;
+        GPBUtil::checkMessage($var, \Inventory\V1\Transfer::class);
+        $this->transfer_from = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 8 [json_name = "toDevice"];</code>
-     * @return \Inventory\V1\DeviceReference|null
+     * Generated from protobuf field <code>optional .inventory.v1.Transfer to_device = 8 [json_name = "toDevice"];</code>
+     * @return \Inventory\V1\Transfer|null
      */
     public function getToDevice()
     {
@@ -262,13 +262,13 @@ class UpdateInventoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.inventory.v1.DeviceReference to_device = 8 [json_name = "toDevice"];</code>
-     * @param \Inventory\V1\DeviceReference $var
+     * Generated from protobuf field <code>optional .inventory.v1.Transfer to_device = 8 [json_name = "toDevice"];</code>
+     * @param \Inventory\V1\Transfer $var
      * @return $this
      */
     public function setToDevice($var)
     {
-        GPBUtil::checkMessage($var, \Inventory\V1\DeviceReference::class);
+        GPBUtil::checkMessage($var, \Inventory\V1\Transfer::class);
         $this->to_device = $var;
 
         return $this;
