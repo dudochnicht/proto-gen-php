@@ -45,30 +45,30 @@ class InventoryServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Inventory\V1\GetInventoriesFromDeviceRequest $argument input argument
+     * @param \Inventory\V1\GetInventoriesTransferFromRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesFromDeviceResponse>
+     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferFromResponse>
      */
-    public function GetInventoriesFromDevice(\Inventory\V1\GetInventoriesFromDeviceRequest $argument,
+    public function GetInventoriesTransferFrom(\Inventory\V1\GetInventoriesTransferFromRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesFromDevice',
+        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferFrom',
         $argument,
-        ['\Inventory\V1\GetInventoriesFromDeviceResponse', 'decode'],
+        ['\Inventory\V1\GetInventoriesTransferFromResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Inventory\V1\GetInventoriesToDeviceRequest $argument input argument
+     * @param \Inventory\V1\GetInventoriesTransferToRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesToDeviceResponse>
+     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferToResponse>
      */
-    public function GetInventoriesToDevice(\Inventory\V1\GetInventoriesToDeviceRequest $argument,
+    public function GetInventoriesTransferTo(\Inventory\V1\GetInventoriesTransferToRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesToDevice',
+        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferTo',
         $argument,
-        ['\Inventory\V1\GetInventoriesToDeviceResponse', 'decode'],
+        ['\Inventory\V1\GetInventoriesTransferToResponse', 'decode'],
         $metadata, $options);
     }
 
