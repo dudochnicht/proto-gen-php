@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>inventory.v1.GetInventoriesTransferFromRequest</code>
+ * Generated from protobuf message <code>inventory.v1.GetInventoriesTransferedToRequest</code>
  */
-class GetInventoriesTransferFromRequest extends \Google\Protobuf\Internal\Message
+class GetInventoriesTransferedToRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>

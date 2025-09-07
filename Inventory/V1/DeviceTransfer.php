@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>inventory.v1.Transfer</code>
+ * Generated from protobuf message <code>inventory.v1.DeviceTransfer</code>
  */
-class Transfer extends \Google\Protobuf\Internal\Message
+class DeviceTransfer extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>optional string device_id = 1 [json_name = "deviceId"];</code>
@@ -22,10 +22,6 @@ class Transfer extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string configuration_id = 2 [json_name = "configurationId"];</code>
      */
     protected $configuration_id = null;
-    /**
-     * Generated from protobuf field <code>optional string transaction_id = 3 [json_name = "transactionId"];</code>
-     */
-    protected $transaction_id = null;
     /**
      * Generated from protobuf field <code>optional int32 slot_number = 4 [json_name = "slotNumber"];</code>
      */
@@ -39,7 +35,6 @@ class Transfer extends \Google\Protobuf\Internal\Message
      *
      *     @type string $device_id
      *     @type string $configuration_id
-     *     @type string $transaction_id
      *     @type int $slot_number
      * }
      */
@@ -108,38 +103,6 @@ class Transfer extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->configuration_id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>optional string transaction_id = 3 [json_name = "transactionId"];</code>
-     * @return string
-     */
-    public function getTransactionId()
-    {
-        return isset($this->transaction_id) ? $this->transaction_id : '';
-    }
-
-    public function hasTransactionId()
-    {
-        return isset($this->transaction_id);
-    }
-
-    public function clearTransactionId()
-    {
-        unset($this->transaction_id);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional string transaction_id = 3 [json_name = "transactionId"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setTransactionId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->transaction_id = $var;
 
         return $this;
     }

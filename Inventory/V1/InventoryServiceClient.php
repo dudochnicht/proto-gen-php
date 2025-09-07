@@ -45,30 +45,30 @@ class InventoryServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Inventory\V1\GetInventoriesTransferFromRequest $argument input argument
+     * @param \Inventory\V1\GetInventoriesTransferedFromRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferFromResponse>
+     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferedFromResponse>
      */
-    public function GetInventoriesTransferFrom(\Inventory\V1\GetInventoriesTransferFromRequest $argument,
+    public function GetInventoriesTransferedFrom(\Inventory\V1\GetInventoriesTransferedFromRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferFrom',
+        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferedFrom',
         $argument,
-        ['\Inventory\V1\GetInventoriesTransferFromResponse', 'decode'],
+        ['\Inventory\V1\GetInventoriesTransferedFromResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Inventory\V1\GetInventoriesTransferToRequest $argument input argument
+     * @param \Inventory\V1\GetInventoriesTransferedToRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferToResponse>
+     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferedToResponse>
      */
-    public function GetInventoriesTransferTo(\Inventory\V1\GetInventoriesTransferToRequest $argument,
+    public function GetInventoriesTransferedTo(\Inventory\V1\GetInventoriesTransferedToRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferTo',
+        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferedTo',
         $argument,
-        ['\Inventory\V1\GetInventoriesTransferToResponse', 'decode'],
+        ['\Inventory\V1\GetInventoriesTransferedToResponse', 'decode'],
         $metadata, $options);
     }
 

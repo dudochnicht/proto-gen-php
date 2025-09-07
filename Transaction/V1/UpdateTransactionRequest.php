@@ -15,41 +15,13 @@ use Google\Protobuf\RepeatedField;
 class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
+     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 1 [json_name = "transactionFrom"];</code>
      */
-    protected $transaction_id = '';
+    protected $transaction_from = null;
     /**
-     * Generated from protobuf field <code>.transaction.v1.Platform platform = 2 [json_name = "platform"];</code>
+     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 2 [json_name = "transactionTo"];</code>
      */
-    protected $platform = 0;
-    /**
-     * Generated from protobuf field <code>.types.v1.Address address = 3 [json_name = "address"];</code>
-     */
-    protected $address = null;
-    /**
-     * Generated from protobuf field <code>string account_id = 4 [json_name = "accountId"];</code>
-     */
-    protected $account_id = '';
-    /**
-     * Generated from protobuf field <code>.transaction.v1.PaymentMethod payment_method = 5 [json_name = "paymentMethod"];</code>
-     */
-    protected $payment_method = 0;
-    /**
-     * Generated from protobuf field <code>.types.v1.Money price = 6 [json_name = "price"];</code>
-     */
-    protected $price = null;
-    /**
-     * Generated from protobuf field <code>.types.v1.ShippingMethod shipping_method = 7 [json_name = "shippingMethod"];</code>
-     */
-    protected $shipping_method = null;
-    /**
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
-     */
-    protected $created_at = null;
-    /**
-     * Generated from protobuf field <code>.transaction.v1.ItemType item_type = 9 [json_name = "itemType"];</code>
-     */
-    protected $item_type = 0;
+    protected $transaction_to = null;
 
     /**
      * Constructor.
@@ -57,15 +29,8 @@ class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $transaction_id
-     *     @type int $platform
-     *     @type \Types\V1\Address $address
-     *     @type string $account_id
-     *     @type int $payment_method
-     *     @type \Types\V1\Money $price
-     *     @type \Types\V1\ShippingMethod $shipping_method
-     *     @type \Google\Protobuf\Timestamp $created_at
-     *     @type int $item_type
+     *     @type \Transaction\V1\TransactionTransfer $transaction_from
+     *     @type \Transaction\V1\TransactionTransfer $transaction_to
      * }
      */
     public function __construct($data = NULL) {
@@ -74,239 +39,65 @@ class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
-     * @return string
+     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 1 [json_name = "transactionFrom"];</code>
+     * @return \Transaction\V1\TransactionTransfer|null
      */
-    public function getTransactionId()
+    public function getTransactionFrom()
     {
-        return $this->transaction_id;
+        return $this->transaction_from;
+    }
+
+    public function hasTransactionFrom()
+    {
+        return isset($this->transaction_from);
+    }
+
+    public function clearTransactionFrom()
+    {
+        unset($this->transaction_from);
     }
 
     /**
-     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
-     * @param string $var
+     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 1 [json_name = "transactionFrom"];</code>
+     * @param \Transaction\V1\TransactionTransfer $var
      * @return $this
      */
-    public function setTransactionId($var)
+    public function setTransactionFrom($var)
     {
-        GPBUtil::checkString($var, True);
-        $this->transaction_id = $var;
+        GPBUtil::checkMessage($var, \Transaction\V1\TransactionTransfer::class);
+        $this->transaction_from = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.Platform platform = 2 [json_name = "platform"];</code>
-     * @return int
+     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 2 [json_name = "transactionTo"];</code>
+     * @return \Transaction\V1\TransactionTransfer|null
      */
-    public function getPlatform()
+    public function getTransactionTo()
     {
-        return $this->platform;
+        return $this->transaction_to;
+    }
+
+    public function hasTransactionTo()
+    {
+        return isset($this->transaction_to);
+    }
+
+    public function clearTransactionTo()
+    {
+        unset($this->transaction_to);
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.Platform platform = 2 [json_name = "platform"];</code>
-     * @param int $var
+     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 2 [json_name = "transactionTo"];</code>
+     * @param \Transaction\V1\TransactionTransfer $var
      * @return $this
      */
-    public function setPlatform($var)
+    public function setTransactionTo($var)
     {
-        GPBUtil::checkEnum($var, \Transaction\V1\Platform::class);
-        $this->platform = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.Address address = 3 [json_name = "address"];</code>
-     * @return \Types\V1\Address|null
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    public function hasAddress()
-    {
-        return isset($this->address);
-    }
-
-    public function clearAddress()
-    {
-        unset($this->address);
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.Address address = 3 [json_name = "address"];</code>
-     * @param \Types\V1\Address $var
-     * @return $this
-     */
-    public function setAddress($var)
-    {
-        GPBUtil::checkMessage($var, \Types\V1\Address::class);
-        $this->address = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string account_id = 4 [json_name = "accountId"];</code>
-     * @return string
-     */
-    public function getAccountId()
-    {
-        return $this->account_id;
-    }
-
-    /**
-     * Generated from protobuf field <code>string account_id = 4 [json_name = "accountId"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setAccountId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->account_id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.transaction.v1.PaymentMethod payment_method = 5 [json_name = "paymentMethod"];</code>
-     * @return int
-     */
-    public function getPaymentMethod()
-    {
-        return $this->payment_method;
-    }
-
-    /**
-     * Generated from protobuf field <code>.transaction.v1.PaymentMethod payment_method = 5 [json_name = "paymentMethod"];</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setPaymentMethod($var)
-    {
-        GPBUtil::checkEnum($var, \Transaction\V1\PaymentMethod::class);
-        $this->payment_method = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.Money price = 6 [json_name = "price"];</code>
-     * @return \Types\V1\Money|null
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    public function hasPrice()
-    {
-        return isset($this->price);
-    }
-
-    public function clearPrice()
-    {
-        unset($this->price);
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.Money price = 6 [json_name = "price"];</code>
-     * @param \Types\V1\Money $var
-     * @return $this
-     */
-    public function setPrice($var)
-    {
-        GPBUtil::checkMessage($var, \Types\V1\Money::class);
-        $this->price = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.ShippingMethod shipping_method = 7 [json_name = "shippingMethod"];</code>
-     * @return \Types\V1\ShippingMethod|null
-     */
-    public function getShippingMethod()
-    {
-        return $this->shipping_method;
-    }
-
-    public function hasShippingMethod()
-    {
-        return isset($this->shipping_method);
-    }
-
-    public function clearShippingMethod()
-    {
-        unset($this->shipping_method);
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.ShippingMethod shipping_method = 7 [json_name = "shippingMethod"];</code>
-     * @param \Types\V1\ShippingMethod $var
-     * @return $this
-     */
-    public function setShippingMethod($var)
-    {
-        GPBUtil::checkMessage($var, \Types\V1\ShippingMethod::class);
-        $this->shipping_method = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
-     * @return \Google\Protobuf\Timestamp|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->created_at;
-    }
-
-    public function hasCreatedAt()
-    {
-        return isset($this->created_at);
-    }
-
-    public function clearCreatedAt()
-    {
-        unset($this->created_at);
-    }
-
-    /**
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
-     * @param \Google\Protobuf\Timestamp $var
-     * @return $this
-     */
-    public function setCreatedAt($var)
-    {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->created_at = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.transaction.v1.ItemType item_type = 9 [json_name = "itemType"];</code>
-     * @return int
-     */
-    public function getItemType()
-    {
-        return $this->item_type;
-    }
-
-    /**
-     * Generated from protobuf field <code>.transaction.v1.ItemType item_type = 9 [json_name = "itemType"];</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setItemType($var)
-    {
-        GPBUtil::checkEnum($var, \Transaction\V1\ItemType::class);
-        $this->item_type = $var;
+        GPBUtil::checkMessage($var, \Transaction\V1\TransactionTransfer::class);
+        $this->transaction_to = $var;
 
         return $this;
     }

@@ -35,17 +35,21 @@ class Inventory extends \Google\Protobuf\Internal\Message
      */
     protected $item_id = '';
     /**
-     * Generated from protobuf field <code>optional string note = 6 [json_name = "note"];</code>
+     * Generated from protobuf field <code>string transaction_id = 6 [json_name = "transactionId"];</code>
+     */
+    protected $transaction_id = '';
+    /**
+     * Generated from protobuf field <code>optional string note = 7 [json_name = "note"];</code>
      */
     protected $note = null;
     /**
-     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_from = 7 [json_name = "transferFrom"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceTransfer from_device = 8 [json_name = "fromDevice"];</code>
      */
-    protected $transfer_from = null;
+    protected $from_device = null;
     /**
-     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_to = 8 [json_name = "transferTo"];</code>
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceTransfer to_device = 9 [json_name = "toDevice"];</code>
      */
-    protected $transfer_to = null;
+    protected $to_device = null;
 
     /**
      * Constructor.
@@ -58,9 +62,10 @@ class Inventory extends \Google\Protobuf\Internal\Message
      *     @type string $component_id
      *     @type string $family_id
      *     @type string $item_id
+     *     @type string $transaction_id
      *     @type string $note
-     *     @type \Inventory\V1\Transfer $transfer_from
-     *     @type \Inventory\V1\Transfer $transfer_to
+     *     @type \Inventory\V1\DeviceTransfer $from_device
+     *     @type \Inventory\V1\DeviceTransfer $to_device
      * }
      */
     public function __construct($data = NULL) {
@@ -179,7 +184,29 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string note = 6 [json_name = "note"];</code>
+     * Generated from protobuf field <code>string transaction_id = 6 [json_name = "transactionId"];</code>
+     * @return string
+     */
+    public function getTransactionId()
+    {
+        return $this->transaction_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string transaction_id = 6 [json_name = "transactionId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTransactionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->transaction_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string note = 7 [json_name = "note"];</code>
      * @return string
      */
     public function getNote()
@@ -198,7 +225,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string note = 6 [json_name = "note"];</code>
+     * Generated from protobuf field <code>optional string note = 7 [json_name = "note"];</code>
      * @param string $var
      * @return $this
      */
@@ -211,65 +238,65 @@ class Inventory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_from = 7 [json_name = "transferFrom"];</code>
-     * @return \Inventory\V1\Transfer|null
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceTransfer from_device = 8 [json_name = "fromDevice"];</code>
+     * @return \Inventory\V1\DeviceTransfer|null
      */
-    public function getTransferFrom()
+    public function getFromDevice()
     {
-        return $this->transfer_from;
+        return $this->from_device;
     }
 
-    public function hasTransferFrom()
+    public function hasFromDevice()
     {
-        return isset($this->transfer_from);
+        return isset($this->from_device);
     }
 
-    public function clearTransferFrom()
+    public function clearFromDevice()
     {
-        unset($this->transfer_from);
+        unset($this->from_device);
     }
 
     /**
-     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_from = 7 [json_name = "transferFrom"];</code>
-     * @param \Inventory\V1\Transfer $var
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceTransfer from_device = 8 [json_name = "fromDevice"];</code>
+     * @param \Inventory\V1\DeviceTransfer $var
      * @return $this
      */
-    public function setTransferFrom($var)
+    public function setFromDevice($var)
     {
-        GPBUtil::checkMessage($var, \Inventory\V1\Transfer::class);
-        $this->transfer_from = $var;
+        GPBUtil::checkMessage($var, \Inventory\V1\DeviceTransfer::class);
+        $this->from_device = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_to = 8 [json_name = "transferTo"];</code>
-     * @return \Inventory\V1\Transfer|null
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceTransfer to_device = 9 [json_name = "toDevice"];</code>
+     * @return \Inventory\V1\DeviceTransfer|null
      */
-    public function getTransferTo()
+    public function getToDevice()
     {
-        return $this->transfer_to;
+        return $this->to_device;
     }
 
-    public function hasTransferTo()
+    public function hasToDevice()
     {
-        return isset($this->transfer_to);
+        return isset($this->to_device);
     }
 
-    public function clearTransferTo()
+    public function clearToDevice()
     {
-        unset($this->transfer_to);
+        unset($this->to_device);
     }
 
     /**
-     * Generated from protobuf field <code>optional .inventory.v1.Transfer transfer_to = 8 [json_name = "transferTo"];</code>
-     * @param \Inventory\V1\Transfer $var
+     * Generated from protobuf field <code>optional .inventory.v1.DeviceTransfer to_device = 9 [json_name = "toDevice"];</code>
+     * @param \Inventory\V1\DeviceTransfer $var
      * @return $this
      */
-    public function setTransferTo($var)
+    public function setToDevice($var)
     {
-        GPBUtil::checkMessage($var, \Inventory\V1\Transfer::class);
-        $this->transfer_to = $var;
+        GPBUtil::checkMessage($var, \Inventory\V1\DeviceTransfer::class);
+        $this->to_device = $var;
 
         return $this;
     }
