@@ -50,6 +50,10 @@ class Inventory extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional .inventory.v1.DeviceTransfer to_device = 9 [json_name = "toDevice"];</code>
      */
     protected $to_device = null;
+    /**
+     * Generated from protobuf field <code>bool is_available = 10 [json_name = "isAvailable"];</code>
+     */
+    protected $is_available = false;
 
     /**
      * Constructor.
@@ -66,6 +70,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
      *     @type string $note
      *     @type \Inventory\V1\DeviceTransfer $from_device
      *     @type \Inventory\V1\DeviceTransfer $to_device
+     *     @type bool $is_available
      * }
      */
     public function __construct($data = NULL) {
@@ -297,6 +302,28 @@ class Inventory extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Inventory\V1\DeviceTransfer::class);
         $this->to_device = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool is_available = 10 [json_name = "isAvailable"];</code>
+     * @return bool
+     */
+    public function getIsAvailable()
+    {
+        return $this->is_available;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool is_available = 10 [json_name = "isAvailable"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsAvailable($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_available = $var;
 
         return $this;
     }
