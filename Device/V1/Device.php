@@ -35,9 +35,9 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     protected $manufacture_date = null;
     /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
+     * Generated from protobuf field <code>string transaction_id = 6 [json_name = "transactionId"];</code>
      */
-    protected $transaction_ids = null;
+    protected $transaction_id = '';
     /**
      * Generated from protobuf field <code>optional string configuration_id = 7 [json_name = "configurationId"];</code>
      */
@@ -58,7 +58,7 @@ class Device extends \Google\Protobuf\Internal\Message
      *     @type string $model_id
      *     @type string $serial_number
      *     @type \Types\V1\Date $manufacture_date
-     *     @type \Device\V1\TransactionIds $transaction_ids
+     *     @type string $transaction_id
      *     @type string $configuration_id
      *     @type int $unit_number
      * }
@@ -199,33 +199,23 @@ class Device extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
-     * @return \Device\V1\TransactionIds|null
+     * Generated from protobuf field <code>string transaction_id = 6 [json_name = "transactionId"];</code>
+     * @return string
      */
-    public function getTransactionIds()
+    public function getTransactionId()
     {
-        return $this->transaction_ids;
-    }
-
-    public function hasTransactionIds()
-    {
-        return isset($this->transaction_ids);
-    }
-
-    public function clearTransactionIds()
-    {
-        unset($this->transaction_ids);
+        return $this->transaction_id;
     }
 
     /**
-     * Generated from protobuf field <code>.device.v1.TransactionIds transaction_ids = 6 [json_name = "transactionIds"];</code>
-     * @param \Device\V1\TransactionIds $var
+     * Generated from protobuf field <code>string transaction_id = 6 [json_name = "transactionId"];</code>
+     * @param string $var
      * @return $this
      */
-    public function setTransactionIds($var)
+    public function setTransactionId($var)
     {
-        GPBUtil::checkMessage($var, \Device\V1\TransactionIds::class);
-        $this->transaction_ids = $var;
+        GPBUtil::checkString($var, True);
+        $this->transaction_id = $var;
 
         return $this;
     }
