@@ -15,17 +15,17 @@ use Google\Protobuf\RepeatedField;
 class DeviceTransfer extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>optional string device_id = 1 [json_name = "deviceId"];</code>
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
      */
-    protected $device_id = null;
+    protected $device_id = '';
     /**
-     * Generated from protobuf field <code>optional string configuration_id = 2 [json_name = "configurationId"];</code>
+     * Generated from protobuf field <code>string configuration_id = 2 [json_name = "configurationId"];</code>
      */
-    protected $configuration_id = null;
+    protected $configuration_id = '';
     /**
-     * Generated from protobuf field <code>optional int32 slot_number = 4 [json_name = "slotNumber"];</code>
+     * Generated from protobuf field <code>int32 slot_number = 4 [json_name = "slotNumber"];</code>
      */
-    protected $slot_number = null;
+    protected $slot_number = 0;
 
     /**
      * Constructor.
@@ -44,26 +44,16 @@ class DeviceTransfer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string device_id = 1 [json_name = "deviceId"];</code>
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
      * @return string
      */
     public function getDeviceId()
     {
-        return isset($this->device_id) ? $this->device_id : '';
-    }
-
-    public function hasDeviceId()
-    {
-        return isset($this->device_id);
-    }
-
-    public function clearDeviceId()
-    {
-        unset($this->device_id);
+        return $this->device_id;
     }
 
     /**
-     * Generated from protobuf field <code>optional string device_id = 1 [json_name = "deviceId"];</code>
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
      * @param string $var
      * @return $this
      */
@@ -76,26 +66,16 @@ class DeviceTransfer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional string configuration_id = 2 [json_name = "configurationId"];</code>
+     * Generated from protobuf field <code>string configuration_id = 2 [json_name = "configurationId"];</code>
      * @return string
      */
     public function getConfigurationId()
     {
-        return isset($this->configuration_id) ? $this->configuration_id : '';
-    }
-
-    public function hasConfigurationId()
-    {
-        return isset($this->configuration_id);
-    }
-
-    public function clearConfigurationId()
-    {
-        unset($this->configuration_id);
+        return $this->configuration_id;
     }
 
     /**
-     * Generated from protobuf field <code>optional string configuration_id = 2 [json_name = "configurationId"];</code>
+     * Generated from protobuf field <code>string configuration_id = 2 [json_name = "configurationId"];</code>
      * @param string $var
      * @return $this
      */
@@ -108,26 +88,16 @@ class DeviceTransfer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional int32 slot_number = 4 [json_name = "slotNumber"];</code>
+     * Generated from protobuf field <code>int32 slot_number = 4 [json_name = "slotNumber"];</code>
      * @return int
      */
     public function getSlotNumber()
     {
-        return isset($this->slot_number) ? $this->slot_number : 0;
-    }
-
-    public function hasSlotNumber()
-    {
-        return isset($this->slot_number);
-    }
-
-    public function clearSlotNumber()
-    {
-        unset($this->slot_number);
+        return $this->slot_number;
     }
 
     /**
-     * Generated from protobuf field <code>optional int32 slot_number = 4 [json_name = "slotNumber"];</code>
+     * Generated from protobuf field <code>int32 slot_number = 4 [json_name = "slotNumber"];</code>
      * @param int $var
      * @return $this
      */
