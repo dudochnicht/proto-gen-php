@@ -15,11 +15,15 @@ use Google\Protobuf\RepeatedField;
 class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 1 [json_name = "transactionFrom"];</code>
+     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
+     */
+    protected $transaction_id = '';
+    /**
+     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 2 [json_name = "transactionFrom"];</code>
      */
     protected $transaction_from = null;
     /**
-     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 2 [json_name = "transactionTo"];</code>
+     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 3 [json_name = "transactionTo"];</code>
      */
     protected $transaction_to = null;
 
@@ -29,6 +33,7 @@ class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $transaction_id
      *     @type \Transaction\V1\TransactionTransfer $transaction_from
      *     @type \Transaction\V1\TransactionTransfer $transaction_to
      * }
@@ -39,7 +44,29 @@ class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 1 [json_name = "transactionFrom"];</code>
+     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
+     * @return string
+     */
+    public function getTransactionId()
+    {
+        return $this->transaction_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string transaction_id = 1 [json_name = "transactionId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTransactionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->transaction_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 2 [json_name = "transactionFrom"];</code>
      * @return \Transaction\V1\TransactionTransfer|null
      */
     public function getTransactionFrom()
@@ -58,7 +85,7 @@ class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 1 [json_name = "transactionFrom"];</code>
+     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 2 [json_name = "transactionFrom"];</code>
      * @param \Transaction\V1\TransactionTransfer $var
      * @return $this
      */
@@ -71,7 +98,7 @@ class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 2 [json_name = "transactionTo"];</code>
+     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 3 [json_name = "transactionTo"];</code>
      * @return \Transaction\V1\TransactionTransfer|null
      */
     public function getTransactionTo()
@@ -90,7 +117,7 @@ class UpdateTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 2 [json_name = "transactionTo"];</code>
+     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 3 [json_name = "transactionTo"];</code>
      * @param \Transaction\V1\TransactionTransfer $var
      * @return $this
      */
