@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>inventory.v1.GetUnmatchedInventoriesRequest</code>
+ * Generated from protobuf message <code>inventory.v1.GetDeviceInventoriesRequest</code>
  */
-class GetUnmatchedInventoriesRequest extends \Google\Protobuf\Internal\Message
+class GetDeviceInventoriesRequest extends \Google\Protobuf\Internal\Message
 {
 
     /**

@@ -45,6 +45,20 @@ class InventoryServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Inventory\V1\GetDeviceInventoriesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Inventory\V1\GetDeviceInventoriesResponse>
+     */
+    public function GetDeviceInventories(\Inventory\V1\GetDeviceInventoriesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/inventory.v1.InventoryService/GetDeviceInventories',
+        $argument,
+        ['\Inventory\V1\GetDeviceInventoriesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Inventory\V1\GetInventoriesTransferedFromRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -73,16 +87,16 @@ class InventoryServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Inventory\V1\GetUnmatchedInventoriesRequest $argument input argument
+     * @param \Inventory\V1\GetAvailableInventoriesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetUnmatchedInventoriesResponse>
+     * @return \Grpc\UnaryCall<\Inventory\V1\GetAvailableInventoriesResponse>
      */
-    public function GetUnmatchedInventories(\Inventory\V1\GetUnmatchedInventoriesRequest $argument,
+    public function GetAvailableInventories(\Inventory\V1\GetAvailableInventoriesRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetUnmatchedInventories',
+        return $this->_simpleRequest('/inventory.v1.InventoryService/GetAvailableInventories',
         $argument,
-        ['\Inventory\V1\GetUnmatchedInventoriesResponse', 'decode'],
+        ['\Inventory\V1\GetAvailableInventoriesResponse', 'decode'],
         $metadata, $options);
     }
 
