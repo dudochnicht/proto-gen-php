@@ -31,9 +31,15 @@ class GetDeviceInventoriesResponse extends \Google\Protobuf\Internal\Message
      */
     private $hardware_items;
     /**
+     * Key = deviceID, Value = Devices
+     *
+     * Generated from protobuf field <code>map<string, .device.v1.Device> devices = 4 [json_name = "devices"];</code>
+     */
+    private $devices;
+    /**
      * Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      *
-     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 4 [json_name = "deviceNames"];</code>
+     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 5 [json_name = "deviceNames"];</code>
      */
     private $device_names;
 
@@ -48,6 +54,8 @@ class GetDeviceInventoriesResponse extends \Google\Protobuf\Internal\Message
      *           Key = TransactionID, Value = Transactions
      *     @type array|\Google\Protobuf\Internal\MapField $hardware_items
      *           Key = ItemID, Value = Items
+     *     @type array|\Google\Protobuf\Internal\MapField $devices
+     *           Key = deviceID, Value = Devices
      *     @type array|\Google\Protobuf\Internal\MapField $device_names
      *           Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      * }
@@ -132,9 +140,35 @@ class GetDeviceInventoriesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Key = deviceID, Value = Devices
+     *
+     * Generated from protobuf field <code>map<string, .device.v1.Device> devices = 4 [json_name = "devices"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getDevices()
+    {
+        return $this->devices;
+    }
+
+    /**
+     * Key = deviceID, Value = Devices
+     *
+     * Generated from protobuf field <code>map<string, .device.v1.Device> devices = 4 [json_name = "devices"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setDevices($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \Device\V1\Device::class);
+        $this->devices = $arr;
+
+        return $this;
+    }
+
+    /**
      * Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      *
-     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 4 [json_name = "deviceNames"];</code>
+     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 5 [json_name = "deviceNames"];</code>
      * @return \Google\Protobuf\Internal\MapField
      */
     public function getDeviceNames()
@@ -145,7 +179,7 @@ class GetDeviceInventoriesResponse extends \Google\Protobuf\Internal\Message
     /**
      * Key = ModelID, Value = DeviceName (Brand + Serie + Model)
      *
-     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 4 [json_name = "deviceNames"];</code>
+     * Generated from protobuf field <code>map<string, .catalog.v1.DeviceName> device_names = 5 [json_name = "deviceNames"];</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */

@@ -18,6 +18,10 @@ class GetDeviceInventoriesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
      */
     protected $device_id = '';
+    /**
+     * Generated from protobuf field <code>optional .inventory.v1.TransferDirection transfer_direction = 2 [json_name = "transferDirection"];</code>
+     */
+    protected $transfer_direction = null;
 
     /**
      * Constructor.
@@ -26,6 +30,7 @@ class GetDeviceInventoriesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $device_id
+     *     @type int $transfer_direction
      * }
      */
     public function __construct($data = NULL) {
@@ -51,6 +56,38 @@ class GetDeviceInventoriesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->device_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .inventory.v1.TransferDirection transfer_direction = 2 [json_name = "transferDirection"];</code>
+     * @return int
+     */
+    public function getTransferDirection()
+    {
+        return isset($this->transfer_direction) ? $this->transfer_direction : 0;
+    }
+
+    public function hasTransferDirection()
+    {
+        return isset($this->transfer_direction);
+    }
+
+    public function clearTransferDirection()
+    {
+        unset($this->transfer_direction);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .inventory.v1.TransferDirection transfer_direction = 2 [json_name = "transferDirection"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTransferDirection($var)
+    {
+        GPBUtil::checkEnum($var, \Inventory\V1\TransferDirection::class);
+        $this->transfer_direction = $var;
 
         return $this;
     }

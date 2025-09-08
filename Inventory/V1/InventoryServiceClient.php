@@ -59,34 +59,8 @@ class InventoryServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Inventory\V1\GetInventoriesTransferedFromRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferedFromResponse>
-     */
-    public function GetInventoriesTransferedFrom(\Inventory\V1\GetInventoriesTransferedFromRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferedFrom',
-        $argument,
-        ['\Inventory\V1\GetInventoriesTransferedFromResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Inventory\V1\GetInventoriesTransferedToRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetInventoriesTransferedToResponse>
-     */
-    public function GetInventoriesTransferedTo(\Inventory\V1\GetInventoriesTransferedToRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventoriesTransferedTo',
-        $argument,
-        ['\Inventory\V1\GetInventoriesTransferedToResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
+     * rpc GetInventoriesTransferedFrom(GetInventoriesTransferedFromRequest) returns (GetInventoriesTransferedFromResponse);
+     * rpc GetInventoriesTransferedTo(GetInventoriesTransferedToRequest) returns (GetInventoriesTransferedToResponse);
      * @param \Inventory\V1\GetAvailableInventoriesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
