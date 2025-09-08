@@ -14,6 +14,10 @@ use Google\Protobuf\RepeatedField;
  */
 class GetDeviceInventoriesRequest extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
+     */
+    protected $device_id = '';
 
     /**
      * Constructor.
@@ -21,11 +25,34 @@ class GetDeviceInventoriesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $device_id
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Inventory\V1\Inventory::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
+     * @return string
+     */
+    public function getDeviceId()
+    {
+        return $this->device_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string device_id = 1 [json_name = "deviceId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDeviceId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->device_id = $var;
+
+        return $this;
     }
 
 }
