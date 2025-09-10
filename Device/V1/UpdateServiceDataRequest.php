@@ -23,7 +23,7 @@ class UpdateServiceDataRequest extends \Google\Protobuf\Internal\Message
      */
     protected $serial_number = null;
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufacture_date = 3 [json_name = "manufactureDate"];</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufacture_date = 3 [json_name = "manufactureDate"];</code>
      */
     protected $manufacture_date = null;
 
@@ -35,7 +35,7 @@ class UpdateServiceDataRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $device_id
      *     @type string $serial_number
-     *     @type \Types\V1\Date $manufacture_date
+     *     @type \Google\Protobuf\Timestamp $manufacture_date
      * }
      */
     public function __construct($data = NULL) {
@@ -98,8 +98,8 @@ class UpdateServiceDataRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufacture_date = 3 [json_name = "manufactureDate"];</code>
-     * @return \Types\V1\Date|null
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufacture_date = 3 [json_name = "manufactureDate"];</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getManufactureDate()
     {
@@ -117,13 +117,13 @@ class UpdateServiceDataRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufacture_date = 3 [json_name = "manufactureDate"];</code>
-     * @param \Types\V1\Date $var
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufacture_date = 3 [json_name = "manufactureDate"];</code>
+     * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
     public function setManufactureDate($var)
     {
-        GPBUtil::checkMessage($var, \Types\V1\Date::class);
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->manufacture_date = $var;
 
         return $this;

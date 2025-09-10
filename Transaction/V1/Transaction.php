@@ -19,13 +19,13 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     protected $id = '';
     /**
-     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 2 [json_name = "transactionFrom"];</code>
+     * Generated from protobuf field <code>.transaction.v1.Participant seller = 2 [json_name = "seller"];</code>
      */
-    protected $transaction_from = null;
+    protected $seller = null;
     /**
-     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 3 [json_name = "transactionTo"];</code>
+     * Generated from protobuf field <code>optional .transaction.v1.Participant buyer = 3 [json_name = "buyer"];</code>
      */
-    protected $transaction_to = null;
+    protected $buyer = null;
     /**
      * Generated from protobuf field <code>.transaction.v1.ItemType item_type = 4 [json_name = "itemType"];</code>
      */
@@ -38,8 +38,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *     @type \Transaction\V1\TransactionTransfer $transaction_from
-     *     @type \Transaction\V1\TransactionTransfer $transaction_to
+     *     @type \Transaction\V1\Participant $seller
+     *     @type \Transaction\V1\Participant $buyer
      *     @type int $item_type
      * }
      */
@@ -71,65 +71,65 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 2 [json_name = "transactionFrom"];</code>
-     * @return \Transaction\V1\TransactionTransfer|null
+     * Generated from protobuf field <code>.transaction.v1.Participant seller = 2 [json_name = "seller"];</code>
+     * @return \Transaction\V1\Participant|null
      */
-    public function getTransactionFrom()
+    public function getSeller()
     {
-        return $this->transaction_from;
+        return $this->seller;
     }
 
-    public function hasTransactionFrom()
+    public function hasSeller()
     {
-        return isset($this->transaction_from);
+        return isset($this->seller);
     }
 
-    public function clearTransactionFrom()
+    public function clearSeller()
     {
-        unset($this->transaction_from);
+        unset($this->seller);
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.TransactionTransfer transaction_from = 2 [json_name = "transactionFrom"];</code>
-     * @param \Transaction\V1\TransactionTransfer $var
+     * Generated from protobuf field <code>.transaction.v1.Participant seller = 2 [json_name = "seller"];</code>
+     * @param \Transaction\V1\Participant $var
      * @return $this
      */
-    public function setTransactionFrom($var)
+    public function setSeller($var)
     {
-        GPBUtil::checkMessage($var, \Transaction\V1\TransactionTransfer::class);
-        $this->transaction_from = $var;
+        GPBUtil::checkMessage($var, \Transaction\V1\Participant::class);
+        $this->seller = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 3 [json_name = "transactionTo"];</code>
-     * @return \Transaction\V1\TransactionTransfer|null
+     * Generated from protobuf field <code>optional .transaction.v1.Participant buyer = 3 [json_name = "buyer"];</code>
+     * @return \Transaction\V1\Participant|null
      */
-    public function getTransactionTo()
+    public function getBuyer()
     {
-        return $this->transaction_to;
+        return $this->buyer;
     }
 
-    public function hasTransactionTo()
+    public function hasBuyer()
     {
-        return isset($this->transaction_to);
+        return isset($this->buyer);
     }
 
-    public function clearTransactionTo()
+    public function clearBuyer()
     {
-        unset($this->transaction_to);
+        unset($this->buyer);
     }
 
     /**
-     * Generated from protobuf field <code>optional .transaction.v1.TransactionTransfer transaction_to = 3 [json_name = "transactionTo"];</code>
-     * @param \Transaction\V1\TransactionTransfer $var
+     * Generated from protobuf field <code>optional .transaction.v1.Participant buyer = 3 [json_name = "buyer"];</code>
+     * @param \Transaction\V1\Participant $var
      * @return $this
      */
-    public function setTransactionTo($var)
+    public function setBuyer($var)
     {
-        GPBUtil::checkMessage($var, \Transaction\V1\TransactionTransfer::class);
-        $this->transaction_to = $var;
+        GPBUtil::checkMessage($var, \Transaction\V1\Participant::class);
+        $this->buyer = $var;
 
         return $this;
     }

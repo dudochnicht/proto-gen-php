@@ -10,30 +10,30 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>transaction.v1.TransactionTransfer</code>
+ * Generated from protobuf message <code>transaction.v1.Participant</code>
  */
-class TransactionTransfer extends \Google\Protobuf\Internal\Message
+class Participant extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.transaction.v1.Platform platform = 1 [json_name = "platform"];</code>
+     * Generated from protobuf field <code>.transaction.v1.SalesChannel sales_channel = 1 [json_name = "salesChannel"];</code>
      */
-    protected $platform = 0;
+    protected $sales_channel = 0;
     /**
-     * Generated from protobuf field <code>.types.v1.Address address = 2 [json_name = "address"];</code>
-     */
-    protected $address = null;
-    /**
-     * Generated from protobuf field <code>string account_name = 3 [json_name = "accountName"];</code>
+     * Generated from protobuf field <code>string account_name = 2 [json_name = "accountName"];</code>
      */
     protected $account_name = '';
+    /**
+     * Generated from protobuf field <code>.types.v1.Address address = 3 [json_name = "address"];</code>
+     */
+    protected $address = null;
     /**
      * Generated from protobuf field <code>.transaction.v1.PaymentMethod payment_method = 4 [json_name = "paymentMethod"];</code>
      */
     protected $payment_method = 0;
     /**
-     * Generated from protobuf field <code>.types.v1.Money price = 5 [json_name = "price"];</code>
+     * Generated from protobuf field <code>.google.type.Money amount = 5 [json_name = "amount"];</code>
      */
-    protected $price = null;
+    protected $amount = null;
     /**
      * Generated from protobuf field <code>.types.v1.ShippingMethod shipping_method = 6 [json_name = "shippingMethod"];</code>
      */
@@ -49,11 +49,11 @@ class TransactionTransfer extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $platform
-     *     @type \Types\V1\Address $address
+     *     @type int $sales_channel
      *     @type string $account_name
+     *     @type \Types\V1\Address $address
      *     @type int $payment_method
-     *     @type \Types\V1\Money $price
+     *     @type \Google\Type\Money $amount
      *     @type \Types\V1\ShippingMethod $shipping_method
      *     @type \Google\Protobuf\Timestamp $created_at
      * }
@@ -64,29 +64,51 @@ class TransactionTransfer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.Platform platform = 1 [json_name = "platform"];</code>
+     * Generated from protobuf field <code>.transaction.v1.SalesChannel sales_channel = 1 [json_name = "salesChannel"];</code>
      * @return int
      */
-    public function getPlatform()
+    public function getSalesChannel()
     {
-        return $this->platform;
+        return $this->sales_channel;
     }
 
     /**
-     * Generated from protobuf field <code>.transaction.v1.Platform platform = 1 [json_name = "platform"];</code>
+     * Generated from protobuf field <code>.transaction.v1.SalesChannel sales_channel = 1 [json_name = "salesChannel"];</code>
      * @param int $var
      * @return $this
      */
-    public function setPlatform($var)
+    public function setSalesChannel($var)
     {
-        GPBUtil::checkEnum($var, \Transaction\V1\Platform::class);
-        $this->platform = $var;
+        GPBUtil::checkEnum($var, \Transaction\V1\SalesChannel::class);
+        $this->sales_channel = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Address address = 2 [json_name = "address"];</code>
+     * Generated from protobuf field <code>string account_name = 2 [json_name = "accountName"];</code>
+     * @return string
+     */
+    public function getAccountName()
+    {
+        return $this->account_name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string account_name = 2 [json_name = "accountName"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccountName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.types.v1.Address address = 3 [json_name = "address"];</code>
      * @return \Types\V1\Address|null
      */
     public function getAddress()
@@ -105,7 +127,7 @@ class TransactionTransfer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Address address = 2 [json_name = "address"];</code>
+     * Generated from protobuf field <code>.types.v1.Address address = 3 [json_name = "address"];</code>
      * @param \Types\V1\Address $var
      * @return $this
      */
@@ -113,28 +135,6 @@ class TransactionTransfer extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Types\V1\Address::class);
         $this->address = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string account_name = 3 [json_name = "accountName"];</code>
-     * @return string
-     */
-    public function getAccountName()
-    {
-        return $this->account_name;
-    }
-
-    /**
-     * Generated from protobuf field <code>string account_name = 3 [json_name = "accountName"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setAccountName($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->account_name = $var;
 
         return $this;
     }
@@ -162,33 +162,33 @@ class TransactionTransfer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Money price = 5 [json_name = "price"];</code>
-     * @return \Types\V1\Money|null
+     * Generated from protobuf field <code>.google.type.Money amount = 5 [json_name = "amount"];</code>
+     * @return \Google\Type\Money|null
      */
-    public function getPrice()
+    public function getAmount()
     {
-        return $this->price;
+        return $this->amount;
     }
 
-    public function hasPrice()
+    public function hasAmount()
     {
-        return isset($this->price);
+        return isset($this->amount);
     }
 
-    public function clearPrice()
+    public function clearAmount()
     {
-        unset($this->price);
+        unset($this->amount);
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Money price = 5 [json_name = "price"];</code>
-     * @param \Types\V1\Money $var
+     * Generated from protobuf field <code>.google.type.Money amount = 5 [json_name = "amount"];</code>
+     * @param \Google\Type\Money $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setAmount($var)
     {
-        GPBUtil::checkMessage($var, \Types\V1\Money::class);
-        $this->price = $var;
+        GPBUtil::checkMessage($var, \Google\Type\Money::class);
+        $this->amount = $var;
 
         return $this;
     }

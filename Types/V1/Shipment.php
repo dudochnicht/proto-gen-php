@@ -15,13 +15,13 @@ use Google\Protobuf\RepeatedField;
 class Shipment extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.types.v1.ShipmentProvider shipment_provider = 1 [json_name = "shipmentProvider"];</code>
+     * Generated from protobuf field <code>.types.v1.Carrier carrier = 1 [json_name = "carrier"];</code>
      */
-    protected $shipment_provider = 0;
+    protected $carrier = 0;
     /**
-     * Generated from protobuf field <code>.types.v1.Money price = 2 [json_name = "price"];</code>
+     * Generated from protobuf field <code>.google.type.Money shipping_cost = 2 [json_name = "shippingCost"];</code>
      */
-    protected $price = null;
+    protected $shipping_cost = null;
     /**
      * Generated from protobuf field <code>string tracking_number = 3 [json_name = "trackingNumber"];</code>
      */
@@ -33,8 +33,8 @@ class Shipment extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $shipment_provider
-     *     @type \Types\V1\Money $price
+     *     @type int $carrier
+     *     @type \Google\Type\Money $shipping_cost
      *     @type string $tracking_number
      * }
      */
@@ -44,55 +44,55 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.ShipmentProvider shipment_provider = 1 [json_name = "shipmentProvider"];</code>
+     * Generated from protobuf field <code>.types.v1.Carrier carrier = 1 [json_name = "carrier"];</code>
      * @return int
      */
-    public function getShipmentProvider()
+    public function getCarrier()
     {
-        return $this->shipment_provider;
+        return $this->carrier;
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.ShipmentProvider shipment_provider = 1 [json_name = "shipmentProvider"];</code>
+     * Generated from protobuf field <code>.types.v1.Carrier carrier = 1 [json_name = "carrier"];</code>
      * @param int $var
      * @return $this
      */
-    public function setShipmentProvider($var)
+    public function setCarrier($var)
     {
-        GPBUtil::checkEnum($var, \Types\V1\ShipmentProvider::class);
-        $this->shipment_provider = $var;
+        GPBUtil::checkEnum($var, \Types\V1\Carrier::class);
+        $this->carrier = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Money price = 2 [json_name = "price"];</code>
-     * @return \Types\V1\Money|null
+     * Generated from protobuf field <code>.google.type.Money shipping_cost = 2 [json_name = "shippingCost"];</code>
+     * @return \Google\Type\Money|null
      */
-    public function getPrice()
+    public function getShippingCost()
     {
-        return $this->price;
+        return $this->shipping_cost;
     }
 
-    public function hasPrice()
+    public function hasShippingCost()
     {
-        return isset($this->price);
+        return isset($this->shipping_cost);
     }
 
-    public function clearPrice()
+    public function clearShippingCost()
     {
-        unset($this->price);
+        unset($this->shipping_cost);
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Money price = 2 [json_name = "price"];</code>
-     * @param \Types\V1\Money $var
+     * Generated from protobuf field <code>.google.type.Money shipping_cost = 2 [json_name = "shippingCost"];</code>
+     * @param \Google\Type\Money $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setShippingCost($var)
     {
-        GPBUtil::checkMessage($var, \Types\V1\Money::class);
-        $this->price = $var;
+        GPBUtil::checkMessage($var, \Google\Type\Money::class);
+        $this->shipping_cost = $var;
 
         return $this;
     }

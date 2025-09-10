@@ -22,7 +22,7 @@ class ShippingMethod extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type bool $is_pickup
+     *     @type bool $pickuped
      *     @type \Types\V1\Shipment $shipment
      * }
      */
@@ -32,25 +32,25 @@ class ShippingMethod extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool is_pickup = 1 [json_name = "isPickup"];</code>
+     * Generated from protobuf field <code>bool pickuped = 1 [json_name = "pickuped"];</code>
      * @return bool
      */
-    public function getIsPickup()
+    public function getPickuped()
     {
         return $this->readOneof(1);
     }
 
-    public function hasIsPickup()
+    public function hasPickuped()
     {
         return $this->hasOneof(1);
     }
 
     /**
-     * Generated from protobuf field <code>bool is_pickup = 1 [json_name = "isPickup"];</code>
+     * Generated from protobuf field <code>bool pickuped = 1 [json_name = "pickuped"];</code>
      * @param bool $var
      * @return $this
      */
-    public function setIsPickup($var)
+    public function setPickuped($var)
     {
         GPBUtil::checkBool($var);
         $this->writeOneof(1, $var);

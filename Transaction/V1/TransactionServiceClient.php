@@ -73,16 +73,30 @@ class TransactionServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Transaction\V1\UpdateTransactionRequest $argument input argument
+     * @param \Transaction\V1\UpdateSellerTransactionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Transaction\V1\UpdateTransactionResponse>
+     * @return \Grpc\UnaryCall<\Transaction\V1\UpdateSellerTransactionResponse>
      */
-    public function UpdateTransaction(\Transaction\V1\UpdateTransactionRequest $argument,
+    public function UpdateSellerTransaction(\Transaction\V1\UpdateSellerTransactionRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/transaction.v1.TransactionService/UpdateTransaction',
+        return $this->_simpleRequest('/transaction.v1.TransactionService/UpdateSellerTransaction',
         $argument,
-        ['\Transaction\V1\UpdateTransactionResponse', 'decode'],
+        ['\Transaction\V1\UpdateSellerTransactionResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Transaction\V1\UpdateBuyerTransactionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Transaction\V1\UpdateBuyerTransactionResponse>
+     */
+    public function UpdateBuyerTransaction(\Transaction\V1\UpdateBuyerTransactionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/transaction.v1.TransactionService/UpdateBuyerTransaction',
+        $argument,
+        ['\Transaction\V1\UpdateBuyerTransactionResponse', 'decode'],
         $metadata, $options);
     }
 

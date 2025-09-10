@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>transaction.v1.UpdateTransactionResponse</code>
+ * Generated from protobuf message <code>transaction.v1.UpdateBuyerTransactionResponse</code>
  */
-class UpdateTransactionResponse extends \Google\Protobuf\Internal\Message
+class UpdateBuyerTransactionResponse extends \Google\Protobuf\Internal\Message
 {
 
     /**
