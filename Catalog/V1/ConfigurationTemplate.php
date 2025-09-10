@@ -25,11 +25,11 @@ class ConfigurationTemplate extends \Google\Protobuf\Internal\Message
      */
     protected $model_id = '';
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufactured_from = 3 [json_name = "manufacturedFrom"];</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufactured_from = 3 [json_name = "manufacturedFrom"];</code>
      */
     protected $manufactured_from = null;
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufactured_to = 4 [json_name = "manufacturedTo"];</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufactured_to = 4 [json_name = "manufacturedTo"];</code>
      */
     protected $manufactured_to = null;
     /**
@@ -46,8 +46,8 @@ class ConfigurationTemplate extends \Google\Protobuf\Internal\Message
      *     @type string $id
      *     @type string $model_id
      *           references BrandService.Model
-     *     @type \Types\V1\Date $manufactured_from
-     *     @type \Types\V1\Date $manufactured_to
+     *     @type \Google\Protobuf\Timestamp $manufactured_from
+     *     @type \Google\Protobuf\Timestamp $manufactured_to
      *     @type \Catalog\V1\AllowedSetting[] $allowed_settings
      * }
      */
@@ -105,8 +105,8 @@ class ConfigurationTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufactured_from = 3 [json_name = "manufacturedFrom"];</code>
-     * @return \Types\V1\Date|null
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufactured_from = 3 [json_name = "manufacturedFrom"];</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getManufacturedFrom()
     {
@@ -124,21 +124,21 @@ class ConfigurationTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufactured_from = 3 [json_name = "manufacturedFrom"];</code>
-     * @param \Types\V1\Date $var
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufactured_from = 3 [json_name = "manufacturedFrom"];</code>
+     * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
     public function setManufacturedFrom($var)
     {
-        GPBUtil::checkMessage($var, \Types\V1\Date::class);
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->manufactured_from = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufactured_to = 4 [json_name = "manufacturedTo"];</code>
-     * @return \Types\V1\Date|null
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufactured_to = 4 [json_name = "manufacturedTo"];</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getManufacturedTo()
     {
@@ -156,13 +156,13 @@ class ConfigurationTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.Date manufactured_to = 4 [json_name = "manufacturedTo"];</code>
-     * @param \Types\V1\Date $var
+     * Generated from protobuf field <code>.google.protobuf.Timestamp manufactured_to = 4 [json_name = "manufacturedTo"];</code>
+     * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
     public function setManufacturedTo($var)
     {
-        GPBUtil::checkMessage($var, \Types\V1\Date::class);
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->manufactured_to = $var;
 
         return $this;
