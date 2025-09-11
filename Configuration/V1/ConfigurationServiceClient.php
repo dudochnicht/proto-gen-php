@@ -17,20 +17,6 @@ class ConfigurationServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Configuration\V1\ListConfigurationsRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Configuration\V1\ListConfigurationsResponse>
-     */
-    public function ListConfigurations(\Configuration\V1\ListConfigurationsRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/configuration.v1.ConfigurationService/ListConfigurations',
-        $argument,
-        ['\Configuration\V1\ListConfigurationsResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Configuration\V1\GetConfigurationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

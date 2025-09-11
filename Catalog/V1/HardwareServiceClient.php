@@ -45,16 +45,16 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Catalog\V1\GetComponentsRequest $argument input argument
+     * @param \Catalog\V1\BatchGetComponentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\GetComponentsResponse>
+     * @return \Grpc\UnaryCall<\Catalog\V1\BatchGetComponentsResponse>
      */
-    public function GetComponents(\Catalog\V1\GetComponentsRequest $argument,
+    public function BatchGetComponents(\Catalog\V1\BatchGetComponentsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.HardwareService/GetComponents',
+        return $this->_simpleRequest('/catalog.v1.HardwareService/BatchGetComponents',
         $argument,
-        ['\Catalog\V1\GetComponentsResponse', 'decode'],
+        ['\Catalog\V1\BatchGetComponentsResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -115,6 +115,20 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Catalog\V1\ListFamiliesByComponentRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\ListFamiliesByComponentResponse>
+     */
+    public function ListFamiliesByComponent(\Catalog\V1\ListFamiliesByComponentRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.HardwareService/ListFamiliesByComponent',
+        $argument,
+        ['\Catalog\V1\ListFamiliesByComponentResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Catalog\V1\GetFamilyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -129,16 +143,16 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Catalog\V1\GetFamiliesRequest $argument input argument
+     * @param \Catalog\V1\BatchGetFamiliesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\GetFamiliesResponse>
+     * @return \Grpc\UnaryCall<\Catalog\V1\BatchGetFamiliesResponse>
      */
-    public function GetFamilies(\Catalog\V1\GetFamiliesRequest $argument,
+    public function BatchGetFamilies(\Catalog\V1\BatchGetFamiliesRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.HardwareService/GetFamilies',
+        return $this->_simpleRequest('/catalog.v1.HardwareService/BatchGetFamilies',
         $argument,
-        ['\Catalog\V1\GetFamiliesResponse', 'decode'],
+        ['\Catalog\V1\BatchGetFamiliesResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -199,6 +213,20 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Catalog\V1\ListItemsByFamilyRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\ListItemsByFamilyResponse>
+     */
+    public function ListItemsByFamily(\Catalog\V1\ListItemsByFamilyRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.HardwareService/ListItemsByFamily',
+        $argument,
+        ['\Catalog\V1\ListItemsByFamilyResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Catalog\V1\GetItemRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -213,30 +241,16 @@ class HardwareServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Catalog\V1\GetItemsRequest $argument input argument
+     * @param \Catalog\V1\BatchGetItemsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\GetItemsResponse>
+     * @return \Grpc\UnaryCall<\Catalog\V1\BatchGetItemsResponse>
      */
-    public function GetItems(\Catalog\V1\GetItemsRequest $argument,
+    public function BatchGetItems(\Catalog\V1\BatchGetItemsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.HardwareService/GetItems',
+        return $this->_simpleRequest('/catalog.v1.HardwareService/BatchGetItems',
         $argument,
-        ['\Catalog\V1\GetItemsResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Catalog\V1\GetFamilyItemsRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\GetFamilyItemsResponse>
-     */
-    public function GetFamilyItems(\Catalog\V1\GetFamilyItemsRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.HardwareService/GetFamilyItems',
-        $argument,
-        ['\Catalog\V1\GetFamilyItemsResponse', 'decode'],
+        ['\Catalog\V1\BatchGetItemsResponse', 'decode'],
         $metadata, $options);
     }
 

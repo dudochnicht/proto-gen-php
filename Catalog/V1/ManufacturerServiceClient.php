@@ -87,16 +87,16 @@ class ManufacturerServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Catalog\V1\ListSeriesRequest $argument input argument
+     * @param \Catalog\V1\ListSeriesByBrandRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\ListSeriesResponse>
+     * @return \Grpc\UnaryCall<\Catalog\V1\ListSeriesByBrandResponse>
      */
-    public function ListSeries(\Catalog\V1\ListSeriesRequest $argument,
+    public function ListSeriesByBrand(\Catalog\V1\ListSeriesByBrandRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.ManufacturerService/ListSeries',
+        return $this->_simpleRequest('/catalog.v1.ManufacturerService/ListSeriesByBrand',
         $argument,
-        ['\Catalog\V1\ListSeriesResponse', 'decode'],
+        ['\Catalog\V1\ListSeriesByBrandResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -157,16 +157,16 @@ class ManufacturerServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Catalog\V1\ListModelsRequest $argument input argument
+     * @param \Catalog\V1\ListModelsBySerieRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\ListModelsResponse>
+     * @return \Grpc\UnaryCall<\Catalog\V1\ListModelsBySerieResponse>
      */
-    public function ListModels(\Catalog\V1\ListModelsRequest $argument,
+    public function ListModelsBySerie(\Catalog\V1\ListModelsBySerieRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.ManufacturerService/ListModels',
+        return $this->_simpleRequest('/catalog.v1.ManufacturerService/ListModelsBySerie',
         $argument,
-        ['\Catalog\V1\ListModelsResponse', 'decode'],
+        ['\Catalog\V1\ListModelsBySerieResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -237,6 +237,20 @@ class ManufacturerServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/catalog.v1.ManufacturerService/GetDeviceName',
         $argument,
         ['\Catalog\V1\GetDeviceNameResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Catalog\V1\BatchGetDeviceNamesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Catalog\V1\BatchGetDeviceNamesResponse>
+     */
+    public function BatchGetDeviceNames(\Catalog\V1\BatchGetDeviceNamesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/catalog.v1.ManufacturerService/BatchGetDeviceNames',
+        $argument,
+        ['\Catalog\V1\BatchGetDeviceNamesResponse', 'decode'],
         $metadata, $options);
     }
 

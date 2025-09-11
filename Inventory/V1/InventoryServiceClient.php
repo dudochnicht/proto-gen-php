@@ -17,6 +17,34 @@ class InventoryServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Inventory\V1\FindInventoriesByDeviceRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Inventory\V1\FindInventoriesByDeviceResponse>
+     */
+    public function FindInventoriesByDevice(\Inventory\V1\FindInventoriesByDeviceRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/inventory.v1.InventoryService/FindInventoriesByDevice',
+        $argument,
+        ['\Inventory\V1\FindInventoriesByDeviceResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Inventory\V1\FindAvailableInventoriesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Inventory\V1\FindAvailableInventoriesResponse>
+     */
+    public function FindAvailableInventories(\Inventory\V1\FindAvailableInventoriesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/inventory.v1.InventoryService/FindAvailableInventories',
+        $argument,
+        ['\Inventory\V1\FindAvailableInventoriesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Inventory\V1\ListInventoriesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -41,36 +69,6 @@ class InventoryServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/inventory.v1.InventoryService/GetInventory',
         $argument,
         ['\Inventory\V1\GetInventoryResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Inventory\V1\GetDeviceInventoriesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetDeviceInventoriesResponse>
-     */
-    public function GetDeviceInventories(\Inventory\V1\GetDeviceInventoriesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetDeviceInventories',
-        $argument,
-        ['\Inventory\V1\GetDeviceInventoriesResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * rpc GetInventoriesTransferedFrom(GetInventoriesTransferedFromRequest) returns (GetInventoriesTransferedFromResponse);
-     * rpc GetInventoriesTransferedTo(GetInventoriesTransferedToRequest) returns (GetInventoriesTransferedToResponse);
-     * @param \Inventory\V1\GetAvailableInventoriesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Inventory\V1\GetAvailableInventoriesResponse>
-     */
-    public function GetAvailableInventories(\Inventory\V1\GetAvailableInventoriesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/inventory.v1.InventoryService/GetAvailableInventories',
-        $argument,
-        ['\Inventory\V1\GetAvailableInventoriesResponse', 'decode'],
         $metadata, $options);
     }
 

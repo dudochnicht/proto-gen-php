@@ -17,20 +17,6 @@ class TransactionServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Transaction\V1\ListTransactionsRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Transaction\V1\ListTransactionsResponse>
-     */
-    public function ListTransactions(\Transaction\V1\ListTransactionsRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/transaction.v1.TransactionService/ListTransactions',
-        $argument,
-        ['\Transaction\V1\ListTransactionsResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Transaction\V1\GetTransactionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -45,16 +31,16 @@ class TransactionServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Transaction\V1\GetTransactionsRequest $argument input argument
+     * @param \Transaction\V1\BatchGetTransactionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Transaction\V1\GetTransactionsResponse>
+     * @return \Grpc\UnaryCall<\Transaction\V1\BatchGetTransactionsResponse>
      */
-    public function GetTransactions(\Transaction\V1\GetTransactionsRequest $argument,
+    public function BatchGetTransactions(\Transaction\V1\BatchGetTransactionsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/transaction.v1.TransactionService/GetTransactions',
+        return $this->_simpleRequest('/transaction.v1.TransactionService/BatchGetTransactions',
         $argument,
-        ['\Transaction\V1\GetTransactionsResponse', 'decode'],
+        ['\Transaction\V1\BatchGetTransactionsResponse', 'decode'],
         $metadata, $options);
     }
 

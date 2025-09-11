@@ -15,11 +15,7 @@ use Google\Protobuf\RepeatedField;
 class ListFamiliesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string component_id = 1 [json_name = "componentId"];</code>
-     */
-    protected $component_id = '';
-    /**
-     * Generated from protobuf field <code>.types.v1.OffsetPage page = 2 [json_name = "page"];</code>
+     * Generated from protobuf field <code>.types.v1.OffsetPage page = 1 [json_name = "page"];</code>
      */
     protected $page = null;
 
@@ -29,7 +25,6 @@ class ListFamiliesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $component_id
      *     @type \Types\V1\OffsetPage $page
      * }
      */
@@ -39,29 +34,7 @@ class ListFamiliesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string component_id = 1 [json_name = "componentId"];</code>
-     * @return string
-     */
-    public function getComponentId()
-    {
-        return $this->component_id;
-    }
-
-    /**
-     * Generated from protobuf field <code>string component_id = 1 [json_name = "componentId"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setComponentId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->component_id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.OffsetPage page = 2 [json_name = "page"];</code>
+     * Generated from protobuf field <code>.types.v1.OffsetPage page = 1 [json_name = "page"];</code>
      * @return \Types\V1\OffsetPage|null
      */
     public function getPage()
@@ -80,7 +53,7 @@ class ListFamiliesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.OffsetPage page = 2 [json_name = "page"];</code>
+     * Generated from protobuf field <code>.types.v1.OffsetPage page = 1 [json_name = "page"];</code>
      * @param \Types\V1\OffsetPage $var
      * @return $this
      */

@@ -15,11 +15,7 @@ use Google\Protobuf\RepeatedField;
 class ListItemsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
-     */
-    protected $family_id = '';
-    /**
-     * Generated from protobuf field <code>.types.v1.OffsetPage page = 2 [json_name = "page"];</code>
+     * Generated from protobuf field <code>.types.v1.OffsetPage page = 1 [json_name = "page"];</code>
      */
     protected $page = null;
 
@@ -29,7 +25,6 @@ class ListItemsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $family_id
      *     @type \Types\V1\OffsetPage $page
      * }
      */
@@ -39,29 +34,7 @@ class ListItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
-     * @return string
-     */
-    public function getFamilyId()
-    {
-        return $this->family_id;
-    }
-
-    /**
-     * Generated from protobuf field <code>string family_id = 1 [json_name = "familyId"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setFamilyId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->family_id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.types.v1.OffsetPage page = 2 [json_name = "page"];</code>
+     * Generated from protobuf field <code>.types.v1.OffsetPage page = 1 [json_name = "page"];</code>
      * @return \Types\V1\OffsetPage|null
      */
     public function getPage()
@@ -80,7 +53,7 @@ class ListItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.types.v1.OffsetPage page = 2 [json_name = "page"];</code>
+     * Generated from protobuf field <code>.types.v1.OffsetPage page = 1 [json_name = "page"];</code>
      * @param \Types\V1\OffsetPage $var
      * @return $this
      */

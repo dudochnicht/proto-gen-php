@@ -46,6 +46,10 @@ class Device extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 unit_number = 8 [json_name = "unitNumber"];</code>
      */
     protected $unit_number = 0;
+    /**
+     * Generated from protobuf field <code>int32 internal_number = 9 [json_name = "internalNumber"];</code>
+     */
+    protected $internal_number = 0;
 
     /**
      * Constructor.
@@ -61,6 +65,7 @@ class Device extends \Google\Protobuf\Internal\Message
      *     @type string $transaction_id
      *     @type string $configuration_id
      *     @type int $unit_number
+     *     @type int $internal_number
      * }
      */
     public function __construct($data = NULL) {
@@ -270,6 +275,28 @@ class Device extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->unit_number = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 internal_number = 9 [json_name = "internalNumber"];</code>
+     * @return int
+     */
+    public function getInternalNumber()
+    {
+        return $this->internal_number;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 internal_number = 9 [json_name = "internalNumber"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInternalNumber($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->internal_number = $var;
 
         return $this;
     }

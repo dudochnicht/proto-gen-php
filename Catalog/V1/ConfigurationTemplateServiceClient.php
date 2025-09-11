@@ -17,16 +17,16 @@ class ConfigurationTemplateServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Catalog\V1\ListConfigurationTemplatesRequest $argument input argument
+     * @param \Catalog\V1\FindConfigurationTemplateByModelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\ListConfigurationTemplatesResponse>
+     * @return \Grpc\UnaryCall<\Catalog\V1\FindConfigurationTemplateByModelResponse>
      */
-    public function ListConfigurationTemplates(\Catalog\V1\ListConfigurationTemplatesRequest $argument,
+    public function FindConfigurationTemplateByModel(\Catalog\V1\FindConfigurationTemplateByModelRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.ConfigurationTemplateService/ListConfigurationTemplates',
+        return $this->_simpleRequest('/catalog.v1.ConfigurationTemplateService/FindConfigurationTemplateByModel',
         $argument,
-        ['\Catalog\V1\ListConfigurationTemplatesResponse', 'decode'],
+        ['\Catalog\V1\FindConfigurationTemplateByModelResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -41,20 +41,6 @@ class ConfigurationTemplateServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/catalog.v1.ConfigurationTemplateService/GetConfigurationTemplate',
         $argument,
         ['\Catalog\V1\GetConfigurationTemplateResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Catalog\V1\GetModelConfigurationTemplateRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Catalog\V1\GetModelConfigurationTemplateResponse>
-     */
-    public function GetModelConfigurationTemplate(\Catalog\V1\GetModelConfigurationTemplateRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/catalog.v1.ConfigurationTemplateService/GetModelConfigurationTemplate',
-        $argument,
-        ['\Catalog\V1\GetModelConfigurationTemplateResponse', 'decode'],
         $metadata, $options);
     }
 

@@ -17,58 +17,30 @@ class DeviceServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Device\V1\ListDevicesRequest $argument input argument
+     * @param \Device\V1\ListDevicesByModelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\ListDevicesResponse>
+     * @return \Grpc\UnaryCall<\Device\V1\ListDevicesByModelResponse>
      */
-    public function ListDevices(\Device\V1\ListDevicesRequest $argument,
+    public function ListDevicesByModel(\Device\V1\ListDevicesByModelRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/ListDevices',
+        return $this->_simpleRequest('/device.v1.DeviceService/ListDevicesByModel',
         $argument,
-        ['\Device\V1\ListDevicesResponse', 'decode'],
+        ['\Device\V1\ListDevicesByModelResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Device\V1\ListModelDevicesRequest $argument input argument
+     * @param \Device\V1\ListLatestDevicesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\ListModelDevicesResponse>
+     * @return \Grpc\UnaryCall<\Device\V1\ListLatestDevicesResponse>
      */
-    public function ListModelDevices(\Device\V1\ListModelDevicesRequest $argument,
+    public function ListLatestDevices(\Device\V1\ListLatestDevicesRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/ListModelDevices',
+        return $this->_simpleRequest('/device.v1.DeviceService/ListLatestDevices',
         $argument,
-        ['\Device\V1\ListModelDevicesResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Device\V1\ListSoldDevicesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\ListSoldDevicesResponse>
-     */
-    public function ListSoldDevices(\Device\V1\ListSoldDevicesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/ListSoldDevices',
-        $argument,
-        ['\Device\V1\ListSoldDevicesResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Device\V1\ListPurchasedDevicesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\ListPurchasedDevicesResponse>
-     */
-    public function ListPurchasedDevices(\Device\V1\ListPurchasedDevicesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/ListPurchasedDevices',
-        $argument,
-        ['\Device\V1\ListPurchasedDevicesResponse', 'decode'],
+        ['\Device\V1\ListLatestDevicesResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -87,6 +59,20 @@ class DeviceServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Device\V1\BatchGetDevicesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Device\V1\BatchGetDevicesResponse>
+     */
+    public function BatchGetDevices(\Device\V1\BatchGetDevicesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/device.v1.DeviceService/BatchGetDevices',
+        $argument,
+        ['\Device\V1\BatchGetDevicesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Device\V1\CreateDeviceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -101,44 +87,16 @@ class DeviceServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Device\V1\UpdateStatusRequest $argument input argument
+     * @param \Device\V1\UpdateDeviceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\UpdateStatusResponse>
+     * @return \Grpc\UnaryCall<\Device\V1\UpdateDeviceResponse>
      */
-    public function UpdateStatus(\Device\V1\UpdateStatusRequest $argument,
+    public function UpdateDevice(\Device\V1\UpdateDeviceRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/UpdateStatus',
+        return $this->_simpleRequest('/device.v1.DeviceService/UpdateDevice',
         $argument,
-        ['\Device\V1\UpdateStatusResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Device\V1\UpdateServiceDataRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\UpdateServiceDataResponse>
-     */
-    public function UpdateServiceData(\Device\V1\UpdateServiceDataRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/UpdateServiceData',
-        $argument,
-        ['\Device\V1\UpdateServiceDataResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Device\V1\UpdateUnitNumberRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\UpdateUnitNumberResponse>
-     */
-    public function UpdateUnitNumber(\Device\V1\UpdateUnitNumberRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/UpdateUnitNumber',
-        $argument,
-        ['\Device\V1\UpdateUnitNumberResponse', 'decode'],
+        ['\Device\V1\UpdateDeviceResponse', 'decode'],
         $metadata, $options);
     }
 
