@@ -15,9 +15,9 @@ use Google\Protobuf\RepeatedField;
 class GetDeviceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>repeated .device.v1.Device device = 1 [json_name = "device"];</code>
+     * Generated from protobuf field <code>.device.v1.Device device = 1 [json_name = "device"];</code>
      */
-    private $device;
+    protected $device = null;
 
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class GetDeviceResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Device\V1\Device[] $device
+     *     @type \Device\V1\Device $device
      * }
      */
     public function __construct($data = NULL) {
@@ -34,23 +34,33 @@ class GetDeviceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .device.v1.Device device = 1 [json_name = "device"];</code>
-     * @return RepeatedField<\Device\V1\Device>
+     * Generated from protobuf field <code>.device.v1.Device device = 1 [json_name = "device"];</code>
+     * @return \Device\V1\Device|null
      */
     public function getDevice()
     {
         return $this->device;
     }
 
+    public function hasDevice()
+    {
+        return isset($this->device);
+    }
+
+    public function clearDevice()
+    {
+        unset($this->device);
+    }
+
     /**
-     * Generated from protobuf field <code>repeated .device.v1.Device device = 1 [json_name = "device"];</code>
-     * @param \Device\V1\Device[] $var
+     * Generated from protobuf field <code>.device.v1.Device device = 1 [json_name = "device"];</code>
+     * @param \Device\V1\Device $var
      * @return $this
      */
     public function setDevice($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Device\V1\Device::class);
-        $this->device = $arr;
+        GPBUtil::checkMessage($var, \Device\V1\Device::class);
+        $this->device = $var;
 
         return $this;
     }
