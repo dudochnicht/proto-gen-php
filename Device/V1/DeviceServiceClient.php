@@ -59,20 +59,6 @@ class DeviceServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Device\V1\BatchGetDevicesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Device\V1\BatchGetDevicesResponse>
-     */
-    public function BatchGetDevices(\Device\V1\BatchGetDevicesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/device.v1.DeviceService/BatchGetDevices',
-        $argument,
-        ['\Device\V1\BatchGetDevicesResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Device\V1\CreateDeviceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
